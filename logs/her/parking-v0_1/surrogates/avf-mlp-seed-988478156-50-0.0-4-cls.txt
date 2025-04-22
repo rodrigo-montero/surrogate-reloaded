@@ -1,0 +1,110 @@
+INFO:avf_train:Args: Namespace(algo='her', avf_policy='mlp', batch_size=256, build_heldout_test=False, env_id='parking-v0', env_name='park', exp_id=9, folder='logs', heldout_test_file='heldout-set-seed-0-0.3-split-5-filter-cls.npz', layers=4, learning_rate=0.0003, n_epochs=2000, no_test_set=False, oversample=0.0, patience=10, preprocess=False, regression=False, save_data=False, seed=988478156, test_split=0.3, training_progress_filter=50, training_stability=1, weight_decay=0.0, weight_loss=True)
+INFO:preprocessor:Number of samples: 8788
+INFO:preprocessor:Data balancing: 0.06019572143832499
+INFO:preprocessor:Training progress filter 0.0. Considering env configurations from episode 1 to episode 8788. Number of failures 529/8788
+INFO:Avf:Train data labels proportion: 0.02347791484281735
+INFO:Avf:Validation data labels proportion: 0.02411873840445269
+INFO:Avf:Test data labels proportion: 0.04805843906189927
+INFO:Avf:Failures train dataset: 59.0/2454.0 non failures
+INFO:Avf:Failures validation dataset: 26.0/1052.0 non failures
+INFO:Avf:Failures test dataset: 125/2476 non failures
+INFO:Avf:Train dataset size: 2513, Validation dataset size: 1078, Test dataset size: 2601
+INFO:Avf:Model architecture: Sequential(
+  (0): Linear(in_features=24, out_features=32, bias=True)
+  (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (2): ReLU()
+  (3): Dropout(p=0.5, inplace=False)
+  (4): Linear(in_features=32, out_features=32, bias=True)
+  (5): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (6): ReLU()
+  (7): Dropout(p=0.5, inplace=False)
+  (8): Linear(in_features=32, out_features=32, bias=True)
+  (9): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (10): ReLU()
+  (11): Dropout(p=0.5, inplace=False)
+  (12): Linear(in_features=32, out_features=32, bias=True)
+  (13): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (14): ReLU()
+  (15): Dropout(p=0.5, inplace=False)
+  (16): Linear(in_features=32, out_features=2, bias=True)
+)
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.97, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 0
+INFO:Avf:New best validation precision: 0.0. Saving model to path: logs/her/parking-v0_9/surrogates/best-avf-mlp-50-0.0-4.pkl
+INFO:Avf:Corresponding validation loss: 0.6934045851230621
+INFO:Avf:Train loss: 0.78, Train accuracy: 0.55, Epoch: 1
+INFO:Avf:Train loss: 0.79, Train accuracy: 0.54, Epoch: 2
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.55, Epoch: 3
+INFO:Avf:Train loss: 0.74, Train accuracy: 0.55, Epoch: 4
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.58, Epoch: 5
+INFO:Avf:Validation loss: 0.71, Validation accuracy: 0.97, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 5
+INFO:Avf:Train loss: 0.76, Train accuracy: 0.58, Epoch: 6
+INFO:Avf:Train loss: 0.70, Train accuracy: 0.60, Epoch: 7
+INFO:Avf:Train loss: 0.76, Train accuracy: 0.58, Epoch: 8
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.60, Epoch: 9
+INFO:Avf:Train loss: 0.71, Train accuracy: 0.60, Epoch: 10
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 10
+INFO:Avf:Train loss: 0.74, Train accuracy: 0.62, Epoch: 11
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.63, Epoch: 12
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.64, Epoch: 13
+INFO:Avf:Train loss: 0.71, Train accuracy: 0.65, Epoch: 14
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.64, Epoch: 15
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 15
+INFO:Avf:Train loss: 0.74, Train accuracy: 0.64, Epoch: 16
+INFO:Avf:Train loss: 0.70, Train accuracy: 0.65, Epoch: 17
+INFO:Avf:Train loss: 0.75, Train accuracy: 0.66, Epoch: 18
+INFO:Avf:Train loss: 0.74, Train accuracy: 0.64, Epoch: 19
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.66, Epoch: 20
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 20
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.65, Epoch: 21
+INFO:Avf:Train loss: 0.75, Train accuracy: 0.65, Epoch: 22
+INFO:Avf:Train loss: 0.74, Train accuracy: 0.65, Epoch: 23
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.66, Epoch: 24
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.66, Epoch: 25
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 25
+INFO:Avf:Train loss: 0.75, Train accuracy: 0.65, Epoch: 26
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.67, Epoch: 27
+INFO:Avf:Train loss: 0.75, Train accuracy: 0.66, Epoch: 28
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.68, Epoch: 29
+INFO:Avf:Train loss: 0.71, Train accuracy: 0.68, Epoch: 30
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 30
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.67, Epoch: 31
+INFO:Avf:Train loss: 0.75, Train accuracy: 0.67, Epoch: 32
+INFO:Avf:Train loss: 0.75, Train accuracy: 0.66, Epoch: 33
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.67, Epoch: 34
+INFO:Avf:Train loss: 0.68, Train accuracy: 0.66, Epoch: 35
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 35
+INFO:Avf:Train loss: 0.71, Train accuracy: 0.66, Epoch: 36
+INFO:Avf:Train loss: 0.70, Train accuracy: 0.66, Epoch: 37
+INFO:Avf:Train loss: 0.68, Train accuracy: 0.66, Epoch: 38
+INFO:Avf:Train loss: 0.71, Train accuracy: 0.67, Epoch: 39
+INFO:Avf:Train loss: 0.69, Train accuracy: 0.68, Epoch: 40
+INFO:Avf:Validation loss: 0.68, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 40
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.66, Epoch: 41
+INFO:Avf:Train loss: 0.71, Train accuracy: 0.69, Epoch: 42
+INFO:Avf:Train loss: 0.71, Train accuracy: 0.68, Epoch: 43
+INFO:Avf:Train loss: 0.70, Train accuracy: 0.69, Epoch: 44
+INFO:Avf:Train loss: 0.72, Train accuracy: 0.69, Epoch: 45
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.98, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 45
+INFO:Avf:Train loss: 0.69, Train accuracy: 0.70, Epoch: 46
+INFO:Avf:Train loss: 0.68, Train accuracy: 0.70, Epoch: 47
+INFO:Avf:Train loss: 0.67, Train accuracy: 0.71, Epoch: 48
+INFO:Avf:Train loss: 0.73, Train accuracy: 0.69, Epoch: 49
+INFO:Avf:Train loss: 0.70, Train accuracy: 0.69, Epoch: 50
+INFO:Avf:Validation loss: 0.69, Validation accuracy: 0.97, Precision failure class: 0.00, Recall failure class: 0.00, Epoch: 50
+INFO:Avf:Early stopping! No improvement in validation loss for 10 epochs
+INFO:Avf:Accuracy test set: 0.9515570934256056
+INFO:Avf:Target: [0 1 1 ... 0 0 0]
+INFO:Avf:Predictions: [0 0 0 ... 0 0 0]
+INFO:Avf:Precision: 0.00
+INFO:Avf:Recall: 0.00
+INFO:Avf:F-measure: 0.00
+INFO:Avf:AUROC: 0.64
+INFO:avf_train:Training metrics test losses. Mean: 0.69, Std: 0.00 (0%), Min: 0.69, Max: 0.69
+INFO:avf_train:Training metrics best epochs. Mean: 0.00, Std: 0.00 (0.0%), Min: 0.00, Max: 0.00
+INFO:avf_train:Training metrics test precisions. Mean: 0.00, Std: 0.00 (0.0%), Min: 0.00, Max: 0.00
+INFO:avf_train:Training metrics test recalls. Mean: 0.00, Std: 0.00 (0.0%), Min: 0.00, Max: 0.00
+INFO:avf_train:Training metrics f-measures. Mean: 0.00, Std: 0.00 (0.0%), Min: 0.00, Max: 0.00
+INFO:avf_train:Training metrics auc_rocs. Mean: 0.64, Std: 0.00 (0%), Min: 0.64, Max: 0.64
+INFO:avf_train:Training metrics test maes. Mean: 0.00, Std: 0.00 (0.0%), Min: 0.00, Max: 0.00
+INFO:avf_train:Training metrics test r2s. Mean: 0.00, Std: 0.00 (0.0%), Min: 0.00, Max: 0.00
+INFO:avf_train:Time elapsed: 9.483287811279297s

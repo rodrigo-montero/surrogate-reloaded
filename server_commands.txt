@@ -1,0 +1,5 @@
+python -m indago.train --algo her -tb logs/tensorboard --verbose 1 --seed 2646669604 --env-name park --env-id parking-v0 --n-timesteps 200000
+
+python -m indago.avf.train --algo her --env-name park --env-id parking-v0 --exp-id 2 --avf-policy mlp --build-heldout-test --test-split 0.1 --seed 0
+
+python -m indago.avf.train --algo her --env-name park --env-id parking-v0 --exp-id 2 --test-split 0.2 --avf-policy mlp --training-progress-filter 20 --oversample 0.0 --n-epochs 2000 --learning-rate 3e-4 --batch-size 256 --patience 10 --weight-loss --layers 2 --seed 2216495700 --heldout-test-file heldout-set-seed-0-0.1-split-5-filter-cls.npz

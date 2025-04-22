@@ -1,0 +1,947 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.fine_tune",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Train Parking Agent",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.train",
+            "args": [
+                "--algo", "her",
+                "-tb", "logs/tensorboard",
+                "--verbose", "1",
+                "--seed", "2646669604",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--n-timesteps", "10000"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Train DonkeyCar Agent",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.train",
+            "args": [
+                "--algo", "sac",
+                "-tb", "logs/tensorboard",
+                "--verbose", "1",
+                "--seed", "2646669604",
+                "--env-name", "donkey",
+                "--env-id", "DonkeyVAE-v0",
+                "--n-timesteps", "10000",
+                "--vae-path", "logs/generated_track/vae-64.pkl",
+                "--z-size", "64",
+	            "--simulation-mul", "5",
+                "--headless",
+                "--exe-path", "./../DonkeySimLinuxIndago/donkey_sim.x86_64",
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Train Humanoid Agent",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.train",
+            "args": [
+                "--algo", "tqc",
+                "-tb", "logs/tensorboard",
+                "--verbose", "1",
+                "--seed", "2646669604",
+                "--env-name", "humanoid",
+                "--env-id", "Humanoid-v0",
+                "--n-timesteps", "1000"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Build Heldout Test Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.avf.train",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "9",
+                "--avf-policy", "mlp",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--build-heldout-test",
+                "--test-split", "0.3",
+                "--seed",
+                "0"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Build Heldout Test DonkeyCar",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.avf.train",
+            "args": [
+                "--algo", "sac",
+                "--exp-id", "2",
+                "--avf-policy", "mlp",
+                "--env-name", "donkey",
+                "--env-id", "DonkeyVAE-v0",
+                "--build-heldout-test",
+                "--test-split", "0.2",
+                "--seed",
+                "0"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Build Heldout Test Humanoid",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.avf.train",
+            "args": [
+                "--algo", "tqc",
+                "--exp-id", "1",
+                "--avf-policy", "mlp",
+                "--env-name", "humanoid",
+                "--env-id", "Humanoid-v0",
+                "--build-heldout-test",
+                "--test-split", "0.2",
+                "--seed",
+                "0"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Create Classifier Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.avf.train",
+            "args": [
+                "--algo", "her",
+                "--env-name", "park",
+                "--env-id",  "parking-v0",
+                "--exp-id", "9",
+                "--test-split", "0.3",
+                "--avf-policy", "cnn",
+                "--training-progress-filter", "50",
+                "--oversample", "0.0",
+                "--n-epochs", "2000",
+                "--learning-rate", "3e-4",
+                "--batch-size", "256",
+                "--patience", "10",
+                "--weight-loss",
+                "--layers", "1",
+                "--seed", "988478156",
+                "--heldout-test-file", "heldout-set-seed-0-0.3-split-5-filter-cls.npz"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Create Classifier DonkeyCart",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.avf.train",
+            "args": [
+                "--algo", "sac",
+                "--env-name", "donkey",
+                "--env-id",  "DonkeyVAE-v0",
+                "--exp-id", "2",
+                "--test-split", "0.2",
+                "--avf-policy", "mlp",
+                "--training-progress-filter", "30",
+                "--oversample", "0.0",
+                "--n-epochs", "2000",
+                "--learning-rate", "3e-4",
+                "--batch-size", "256",
+                "--patience", "10",
+                "--weight-loss",
+                "--layers", "4",
+                "--seed", "988478156",
+                "--heldout-test-file", "heldout-set-seed-0-0.2-split-5-filter-cls.npz"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Create Classifier Humanoid",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.avf.train",
+            "args": [
+                "--algo", "tqc",
+                "--env-name", "humanoid",
+                "--env-id",  "Humanoid-v0",
+                "--exp-id", "1",
+                "--test-split", "0.2",
+                "--avf-policy", "mlp",
+                "--training-progress-filter", "10",
+                "--oversample", "0.0",
+                "--n-epochs", "2000",
+                "--learning-rate", "3e-4",
+                "--batch-size", "256",
+                "--patience", "10",
+                "--weight-loss",
+                "--layers", "1",
+                "--seed", "988478156",
+                "--heldout-test-file", "heldout-set-seed-0-0.2-split-5-filter-cls.npz"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Create Regressor Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.avf.train",
+            "args": [
+                "--algo", "her",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--exp-id", "4",
+                "--test-split", "0.1",
+                "--avf-policy", "mlp",
+                "--training-progress-filter", "10",
+                "--oversample", "0.0",
+                "--n-epochs", "2000",
+                "--learning-rate", "3e-4",
+                "--batch-size", "256",
+                "--patience", "10",
+                "--weight-loss",
+                "--layers", "2",
+                "--seed", "988478156",
+                "--heldout-test-file", "heldout-set-seed-0-0.1-split-5-filter-rgr.npz",
+                "--regression"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Random Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "9",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--avf-test-policy", "random",
+                "--failure-prob-dist",
+                "--num-episodes", "10",
+                "--num-runs-each-env-config", "1",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Random DonkeyCar",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "sac",
+                "--exp-id", "0",
+                "--env-name", "donkey",
+                "--env-id", "DonkeyVAE-v0",
+                "--avf-test-policy", "random",
+                "--failure-prob-dist",
+                "--num-episodes", "50",
+                "--num-runs-each-env-config", "1",
+                "--num-runs-experiments", "1",
+                "--vae-path", "logs/generated_track/vae-64.pkl",
+                "--simulation-mul", "5",
+                "--exe-path", "./../DonkeySimLinuxIndago/donkey_sim.x86_64"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Random Humanoid",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "tqc",
+                "--exp-id", "1",
+                "--env-name", "humanoid",
+                "--env-id", "Humanoid-v0",
+                "--avf-test-policy", "random",
+                "--failure-prob-dist",
+                "--num-episodes", "50",
+                "--num-runs-each-env-config", "1",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Sampling Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "1",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--avf-test-policy", "nn",
+                "--failure-prob-dist",
+                "--num-episodes", "50",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "50",
+                "--layers", "4",
+                "--budget", "3",
+                "--num-runs-experiments",
+                "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Hill Climbing Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "1",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "hc_saliency_failure",
+                "--failure-prob-dist",
+                "--num-episodes", "50",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "50",
+                "--layers", "4",
+                "--budget", "3",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Original GA Parking", // Original GA method from the source code
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "1",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "ga_saliency_rnd",
+                "--failure-prob-dist",
+                "--num-episodes", "50",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "50",
+                "--layers", "4",
+                "--budget", "3",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Original GA DonkeyCar", // Original GA method from the source code
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "sac",
+                "--exp-id", "0",
+                "--env-name", "donkey",
+                "--env-id", "DonkeyVAE-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "ga_saliency_failure",
+                "--failure-prob-dist",
+                "--vae-path", "logs/generated_track/vae-64.pkl",
+                "--z-size", "64",
+                "--simulation-mul", "5",
+                "--exe-path", "./../DonkeySimLinuxIndago/donkey_sim.x86_64",
+                "--num-episodes", "1",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "30",
+                "--layers", "4",
+                "--budget", "3",
+                "--num-runs-experiments", "10"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Original GA Humanoid", // Original GA method from the source code
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "tqc",
+                "--exp-id", "0",
+                "--env-name", "humanoid",
+                "--env-id", "Humanoid-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "ga_saliency_failure",
+                "--failure-prob-dist",
+                "--num-episodes", "50",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "10",
+                "--layers", "1",
+                "--budget", "3",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Multi-obj Parking", // Runner for the multi objective search using Pymoo (Change --avf-test-policy for varying algorithms)
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "3",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "age_saliency_rnd",
+                "--failure-prob-dist",
+                "--num-episodes", "5",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "50",
+                "--layers", "4",
+                "--budget", "50",
+                "--num-runs-experiments", "4"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Multi-obj DonkeyCar", // Original GA method from the source code
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "sac",
+                "--exp-id", "2",
+                "--env-name", "donkey",
+                "--env-id", "DonkeyVAE-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "age_saliency_failure",
+                "--failure-prob-dist",
+                "--vae-path", "logs/generated_track/vae-64.pkl",
+                "--z-size", "64",
+                "--simulation-mul", "5",
+                "--exe-path", "./../DonkeySimLinuxIndago/donkey_sim.x86_64",
+                "--num-episodes", "2",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "30",
+                "--layers", "4",
+                "--budget", "3",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Multi-obj Humanoid", // Runner for the multi objective search using Pymoo (Change --avf-test-policy for varying algorithms)
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "tqc",
+                "--exp-id", "0",
+                "--env-name", "humanoid",
+                "--env-id", "Humanoid-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "nsga_saliency_failure",
+                "--failure-prob-dist",
+                "--num-episodes", "5",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "10",
+                "--layers", "1",
+                "--budget", "50",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Pymoo GA Parking", // Runner for the GA search using Pymoo
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "3",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "pmga_saliency_rnd",
+                "--failure-prob-dist",
+                "--num-episodes", "4",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "50",
+                "--layers", "4",
+                "--budget", "10",
+                "--num-runs-experiments", "3"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Pymoo GA DonkeyCar", // Original GA method from the source code
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "sac",
+                "--exp-id", "0",
+                "--env-name", "donkey",
+                "--env-id", "DonkeyVAE-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "pmga_saliency_rnd",
+                "--failure-prob-dist",
+                "--vae-path", "logs/generated_track/vae-64.pkl",
+                "--z-size", "64",
+                "--simulation-mul", "5",
+                "--exe-path", "./../DonkeySimLinuxIndago/donkey_sim.x86_64",
+                "--num-episodes", "4",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "30",
+                "--layers", "4",
+                "--budget", "3",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Test - Pymoo GA Humanoid", // Runner for the GA search using Pymoo
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "tqc",
+                "--exp-id", "0",
+                "--env-name", "humanoid",
+                "--env-id", "Humanoid-v0",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "pmga_saliency_rnd",
+                "--failure-prob-dist",
+                "--num-episodes", "4",
+                "--num-runs-each-env-config", "1",
+                "--training-progress-filter", "10",
+                "--layers", "1",
+                "--budget", "50",
+                "--num-runs-experiments", "1"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        // {
+        //     "name": "Python Debugger: indago.env_logs_analysis_trials park",
+        //     "type": "debugpy",
+        //     "request": "launch",
+        //     "module": "indago.logs_analysis_trials",
+        //     "args": [
+        //         "--folder", "logs/her/parking-v0_7",
+        //         "--env-name", "park",
+        //         "--avf-train-policy", "cnn",
+        //         "--names",
+        //         "agemu_saliency_failure"
+        //     ]
+        // },
+        {
+            "name": "Log analysis generator - Park",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.env_logs_analysis_trials",
+            "args": [
+                "--folder", "logs/her/parking-v0_1",
+                "--env-name", "park",
+                "--avf-train-policy", "mlp",
+                "--type", "output",
+                "--names",
+                "ga_saliency_rnd",
+                "pmga_saliency_rnd",
+                "age_saliency_rnd",
+                "nsga_saliency_rnd",
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Log analysis generator - Donkey",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.env_logs_analysis_trials",
+            "args": [
+                "--folder", "logs/sac/DonkeyVAE-v0-scene-generated_track_0",
+                "--env-name", "donkey",
+                "--avf-train-policy", "mlp",
+                "--type", "output",
+                "--names",
+                // "ga_saliency_failure",
+                "pmga_saliency_failure",
+                // "nsga_saliency_failure",
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Log analysis generator - Humanoid",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.env_logs_analysis_trials",
+            "args": [
+                "--folder", "logs/tqc/Humanoid-v0_0",
+                "--env-name", "humanoid",
+                "--avf-train-policy", "mlp",
+                "--type", "input",
+                "--names",
+                "nsga_saliency_failure",
+                "age_saliency_failure",
+                "ga_saliency_failure",
+                "pmga_saliency_failure",
+                // "nsga_saliency_rnd",
+                // "ga_saliency_rnd",
+                // "pmga_saliency_rnd",
+                // "age_saliency_rnd",
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Python Debugger: indago.env_logs_analysis park OLD",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.env_logs_analysis",
+            "args": [
+                "--folder", "logs/her/parking-v0_7",
+                "--env-name", "park",
+                "--files", "testing-cnn-agemu_saliency_failure-30-0.0-1-50-0.75-failure-prob-dist-1-1-budget-50.txt",
+                "--names",
+                "agemu_saliency_failure"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Calculate Diversity - Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "1",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--avf-test-policy", "replay_test_failure",
+                "--avf-train-policy", "mlp",
+                "--folder-extension", "/nsga_saliency_rnd",
+                "--failure-prob-dist",
+                "--num-runs-each-env-config", "1",
+                "--exp-file",
+                "testing-mlp-nsga_saliency_rnd-30-0.0-4-50-0.75-failure-prob-dist-50-1-budget-50-0-trial.txt"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Calculate Diversity - Donkey",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "sac",
+                "--exp-id", "0",
+                "--env-name", "donkey",
+                "--env-id", "DonkeyVAE-v0",
+                "--avf-test-policy", "replay_test_failure",
+                "--avf-train-policy", "mlp",
+                "--folder-extension", "/pmga_saliency_rnd",
+                "--failure-prob-dist",
+                "--vae-path", "logs/generated_track/vae-64.pkl",
+                "--z-size", "64",
+                "--simulation-mul", "5",
+                "--exe-path", "./../DonkeySimLinuxIndago/donkey_sim.x86_64",
+                "--num-runs-each-env-config", "1",
+                "--exp-file",
+                "testing-mlp-pmga_saliency_rnd-30-0.0-4-50-0.75-failure-prob-dist-50-1-budget-3-0-trial.txt"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Calculate Diversity - Humanoid",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.experiments",
+            "args": [
+                "--algo", "tqc",
+                "--exp-id", "0",
+                "--env-name", "humanoid",
+                "--env-id", "Humanoid-v0",
+                "--avf-test-policy", "replay_test_failure",
+                "--avf-train-policy", "mlp",
+                "--folder-extension", "/age_saliency_failure",
+                "--failure-prob-dist",
+                "--num-runs-each-env-config", "1",
+                "--exp-file",
+                "testing-mlp-age_saliency_failure-30-0.0-1-50-0.75-failure-prob-dist-50-1-budget-3-0-trial.txt"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Analyse Diversity - Parking",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.diversity",
+            "args": [
+                "--folder", "logs/her/parking-v0_1",
+                "--env-name", "park",
+                "--pattern",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "nsga_saliency_rnd",
+                "--type", "input",
+                "--sil-threshold", "20",
+                "--names",
+                "ga_saliency_failure",
+                "age_saliency_failure",
+                "pmga_saliency_failure",
+                "nsga_saliency_failure",
+                // "ga_saliency_rnd",
+                // "nsga_saliency_rnd",
+                // "pmga_saliency_rnd",
+                // "nsga_saliency_rnd",
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Analyse Diversity - Donkey",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.diversity",
+            "args": [
+                "--folder", "logs/sac/DonkeyVAE-v0-scene-generated_track_9",
+                "--env-name", "donkey",
+                "--pattern",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "ga_saliency_failure",
+                "--type", "input",
+                "--sil-threshold", "20",
+                "--names",
+                "ga_saliency_failure",
+                "age_saliency_failure",
+                "pmga_saliency_failure",
+                "nsga_saliency_failure",
+                // "ga_saliency_rnd",
+                // "nsga_saliency_rnd",
+                // "pmga_saliency_rnd",
+                // "nsga_saliency_rnd",
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Analyse Diversity - Humanoid",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.diversity",
+            "args": [
+                "--folder", "logs/tqc/Humanoid-v0_0",
+                "--env-name", "humanoid",
+                "--pattern",
+                "--avf-train-policy", "mlp",
+                "--avf-test-policy", "ga_saliency_failure",
+                "--type", "output",
+                "--sil-threshold", "20",
+                "--names",
+                "ga_saliency_failure",
+                "age_saliency_failure",
+                "pmga_saliency_failure",
+                "nsga_saliency_failure",
+                // "ga_saliency_rnd",
+                // "nsga_saliency_rnd",
+                // "pmga_saliency_rnd",
+                // "nsga_saliency_rnd",
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        },
+        {
+            "name": "Python Debugger: indago.enjoy park",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "indago.enjoy",
+            "args": [
+                "--algo", "her",
+                "--exp-id", "2",
+                "--env-name", "park",
+                "--env-id", "parking-v0",
+                "--n-episodes", "10",
+                "--seed", "0"
+            ],
+            "osx": {
+                "pythonPath": "/root/miniconda3/envs/indago/bin/python",
+                "env": {
+                    "PATH": "/root/miniconda3/envs/indago/bin:${env:PATH}"
+                }
+            }
+        }
+    ]
+}
