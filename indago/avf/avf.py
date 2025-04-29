@@ -25,9 +25,6 @@ from indago.avf.env_configuration import EnvConfiguration
 from indago.avf.factories import get_avf_policy, get_chromosome_factory, get_stopping_criterion_factory
 from indago.avf.ga.chromsome import Chromosome
 from indago.avf.ga.genetic_algorithm import GeneticAlgorithm
-from indago.avf.moomoo.moomoo_ga import PMGA
-from indago.avf.moomoo.moomoo_nsga2 import PMNSGA2
-from indago.avf.moomoo.moomoo_age import PMAGEMOEA
 from indago.avf.preprocessor import preprocess_data
 from indago.avf.training_logs import TrainingLogs
 from indago.config import DONKEY_ENV_NAME, ENV_NAMES, HUMANOID_ENV_NAME, PARK_ENV_NAME
