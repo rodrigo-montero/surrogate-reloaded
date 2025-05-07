@@ -101,7 +101,7 @@ class Dataset(ABC):
     def get_num_features(self) -> int:
         assert len(self.dataset) > 0, "Not possible to infer num features since there is no data point"
         assert self.policy is not None, "Policy not instantiated"
-        if self.policy == "mlp" or self.policy == "cnn":
+        if self.policy == "mlp" or self.policy == "cnn" or self.policy == "bnn":                                                # NEW (bnn)
             data_item = self.dataset[0]
             return len(self.transform_mlp(env_configuration=data_item.training_logs.get_config()))
         # TODO: add cnn, i.e. number of channels
@@ -112,7 +112,7 @@ class Dataset(ABC):
 
     def transform_env_configuration(self, env_configuration: EnvConfiguration, policy: str,) -> np.ndarray:
         assert self.policy is not None, "Policy not instantiated"
-        if policy == "mlp" or self.policy == "cnn":
+        if policy == "mlp" or self.policy == "cnn" or self.policy == "bnn":                                                     # NEW (bnn)
             transformed = self.transform_mlp(env_configuration=env_configuration)
             if self.input_scaler is not None:
                 transformed = self.input_scaler.transform(X=transformed.reshape(1, -1)).squeeze()
@@ -332,3 +332,75 @@ class Dataset(ABC):
                 TorchDataset(data=test_data, labels=test_labels, regression=regression, weight_loss=weight_loss),
             )
         return train_data, train_labels, test_data, test_labels
+
+
+    @staticmethod
+    def augment_minority_class(                                                                                         # NEW (bnn)
+        data: np.ndarray,
+        labels: np.ndarray,
+        seed: int = 0,
+        num_new_samples_per_original: int = 1,
+    ) -> Tuple[np.ndarray, np.ndarray]:
+        """
+        Creates synthetic data for the minority class by adding slight perturbations.
+
+        :param data: The dataset (2D np.ndarray)
+        :param labels: The labels (1D np.ndarray)
+        :param seed: Random seed
+        :param num_new_samples_per_original: How many synthetic samples to create per minority sample
+        :return: (augmented_data, augmented_labels)
+        """
+        features_to_augment = {
+                            2: 0.01,  # heading_ego
+                            3: 0.05,  # position_ego[0]
+                            4: 0.05,  # position_ego[1]
+                        }
+        integer_features = {
+                            0: (1, 10),  # num_lanes
+                            1: (0, 10),  # goal_lane_idx
+                        }
+
+        logger = Log("augmentation")
+        np.random.seed(seed)
+
+        if features_to_augment is None:
+            features_to_augment = {}
+        if integer_features is None:
+            integer_features = {}
+
+        logger.info("Starting synthetic augmentation on minority class...")
+        minority_idx = np.where(labels == 1)[0]
+        synthetic_samples = []
+
+        for idx in minority_idx:
+            original = data[idx]
+            for _ in range(num_new_samples_per_original):
+                new_sample = original.copy()
+
+                # Add noise to selected features
+                for feat_idx, noise_std in features_to_augment.items():
+                    new_sample[feat_idx] += np.random.normal(0, noise_std)
+
+                # Handle integer features (round + clip)
+                for int_idx, (min_val, max_val) in integer_features.items():
+                    new_sample[int_idx] = np.clip(
+                        int(round(new_sample[int_idx])), min_val, max_val
+                    )
+
+                synthetic_samples.append(new_sample)
+
+        if synthetic_samples:
+            synthetic_data = np.array(synthetic_samples)
+            synthetic_labels = np.ones(len(synthetic_samples))
+
+            # Stack to original
+            augmented_data = np.vstack([data, synthetic_data])
+            augmented_labels = np.hstack([labels, synthetic_labels])
+
+            logger.info("Added {} synthetic samples.".format(len(synthetic_samples)))
+            return augmented_data, augmented_labels
+        else:
+            logger.info("No minority samples found for augmentation.")
+            return data, labels
+
+

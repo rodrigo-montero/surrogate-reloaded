@@ -1225,6 +1225,8 @@ class Avf:
         batch_size: int = 64,
         training_progress_filter: int = 0,
         weight_loss: bool = False,
+        hidden_layer_size: int = 64,                                                                                # NEW (bnn)
+        model: str = "blitz",                                                                                       # NEW (bnn)
         train_dataset_: TorchDataset = None,
         validation_dataset_: TorchDataset = None,
         test_dataset_: TorchDataset = None,
@@ -1364,6 +1366,8 @@ class Avf:
             regression=self.regression,
             layers=layers,
             learning_rate=learning_rate,
+            hidden_layer_size=hidden_layer_size,                                                                                # NEW (bnn)
+            model=model                                                                                                         # NEW (bnn)
         )
         self.logger.info("Model architecture: {}".format(avf_policy.get_model()))
 

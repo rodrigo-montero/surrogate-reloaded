@@ -4,12 +4,13 @@ import os
 import time
 from functools import reduce
 from typing import List, Tuple
+import json                                                                                                 # NEW (bnn)
 
 import numpy as np
 from stable_baselines3.common.utils import set_random_seed
 
 from indago.avf.avf import Avf
-from indago.avf.config import AVF_DNN_POLICIES, AVF_TRAIN_POLICIES, CLASSIFIER_LAYERS
+from indago.avf.config import AVF_DNN_POLICIES, AVF_TRAIN_POLICIES, CLASSIFIER_LAYERS, BNN_MODELS           # NEW (bnn)
 from indago.avf.dataset import Dataset, TorchDataset
 from indago.avf.preprocessor import preprocess_data
 from indago.config import DONKEY_ENV_NAME, ENV_IDS, ENV_NAMES
@@ -39,6 +40,9 @@ parser.add_argument("--learning-rate", help="Learning rate to train AVF DNN", ty
 parser.add_argument("--batch-size", help="Batch size to train AVF DNN", type=int, default=64)
 parser.add_argument("--weight-decay", help="Weight decay for optimizer when training AVF DNN", type=float, default=0.0)
 parser.add_argument("--weight-loss", help="Whether to use a simple weight loss scheme", action="store_true", default=False)
+parser.add_argument("--hidden-layer-size", help="Size of the hidden layers", type=int, default=64)                              # NEW
+parser.add_argument("--under", help="Whether to undersample or not", action="store_true", default=False)                        # NEW
+parser.add_argument("--model", help="String that determines the model (made for bnn)", type=str, choices=BNN_MODELS)            # NEW
 parser.add_argument(
     "--patience", help="Early stopping patience (# of epochs of no improvement) when training AVF DNN", type=int, default=20
 )
@@ -435,11 +439,24 @@ if __name__ == "__main__":
                     regression=args.regression,
                 )
 
+                augment_data = True
+                if augment_data:                                                                                                        # NEW (bnn)
+                    # This runs if the augment data flag is True, 
+                    # The goal is to create synthetic data of the minority class.
+                    logger.info("Applying synthetic data augmentation")
+                    train_data, train_labels = Dataset.augment_minority_class(
+                        data=train_data,
+                        labels=train_labels,
+                        seed=42,
+                        num_new_samples_per_original=1,
+                    )
+                    logger.info("Augmentation done. New train size: {}".format(len(train_data)))
+
                 if args.oversample > 0.0:
                     logger.info("Train data sampling")
                     logger.info("Fixing seed for over/under sampling: 0")
                     train_data, train_labels = Dataset.sampling(
-                        data=train_data, labels=train_labels, under=True, sampling_percentage=args.oversample, seed=0
+                        data=train_data, labels=train_labels, under=args.under, sampling_percentage=args.oversample, seed=0             # NEW (bnn) CHANGE (under)
                     )
                     train_failures, train_non_failures = failures_non_failures_set(ls=train_labels)
                     logger.info("Train data size: {}, {}/{}".format(len(train_data), train_failures, train_non_failures))
@@ -450,7 +467,7 @@ if __name__ == "__main__":
 
                     logger.info("Validation data sampling")
                     validation_data, validation_labels = Dataset.sampling(
-                        data=validation_data, labels=validation_labels, under=True, sampling_percentage=args.oversample, seed=0
+                        data=validation_data, labels=validation_labels, under=args.under, sampling_percentage=args.oversample, seed=0   # NEW (bnn) CHANGE (under)
                     )
                     validation_failures, validation_non_failures = failures_non_failures_set(ls=validation_labels)
                     logger.info(
@@ -513,6 +530,8 @@ if __name__ == "__main__":
                     batch_size=args.batch_size,
                     training_progress_filter=args.training_progress_filter,
                     weight_loss=args.weight_loss,
+                    hidden_layer_size=args.hidden_layer_size,                                                               # NEW (bnn)
+                    model=args.model,                                                                                       # NEW (bnn)
                     no_test_set=args.no_test_set,
                     train_dataset_=train_dataset,
                     validation_dataset_=validation_dataset,
@@ -536,3 +555,23 @@ if __name__ == "__main__":
         print_training_summary(training_metrics=training_stability_metrics, log=logger)
 
     logger.info("Time elapsed: {}s".format(time.time() - start_time))
+
+    # NEW (bnn)
+    # This section will print the final results
+    # These results will be picked up by the process running the grid search so that they can be stored in a file
+    final_results = {
+        'accuracy': test_precision,
+        'precision': test_precision,
+        'recall': test_recall,
+        'f_measure': fmeasure,
+        'auc_roc': auc_roc,
+        'test_loss': test_loss,
+        'best_epochs': best_epochs,
+        'exp_id': args.exp_id,
+        'layers': args.layers,
+        'learning_rate': args.learning_rate,
+        'oversample': args.oversample,
+        'seed': args.seed,
+    }
+    print("FINAL_RESULTS:" + json.dumps(final_results))
+

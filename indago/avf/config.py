@@ -1,5 +1,6 @@
-AVF_DNN_POLICIES = ["mlp", "cnn"]
+AVF_DNN_POLICIES = ["mlp", "cnn", "bnn"]            # NEW (bnn)
 
+BNN_MODELS = ["mc-dropout", "blitz"]                # NEW (bnn)
 CLASSIFIER_LAYERS = [1, 2, 3, 4]
 AVF_TRAIN_POLICIES = [*AVF_DNN_POLICIES]
 AVF_TEST_POLICIES_WITH_DNN = [
