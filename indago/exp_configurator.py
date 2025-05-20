@@ -35,6 +35,7 @@ class ExpConfigurator:
         model_checkpoint: int = -1,
         training_progress_filter: int = None,
         layers: int = 4,
+        hidden_layer_size: int = 64,
         oversample_minority_class_percentage: float = 0.0,
         failure_prob_dist: bool = True,
         num_episodes: int = 1000,
@@ -71,6 +72,7 @@ class ExpConfigurator:
         self.neighborhood_size = neighborhood_size
         self.oversample_minority_class_percentage = oversample_minority_class_percentage
         self.layers = layers
+        self.hidden_layer_size = hidden_layer_size
         self.stagnation_tolerance = stagnation_tolerance
         self.hc_counter = hc_counter
         self.model_checkpoint = model_checkpoint
@@ -197,6 +199,7 @@ class ExpConfigurator:
             folder_extension=self.folder_extension,
             oversample_minority_class_percentage=self.oversample_minority_class_percentage,
             layers=self.layers,
+            hidden_layer_size=self.hidden_layer_size,
             stagnation_tolerance=self.stagnation_tolerance,
             dnn_sampling=self.dnn_sampling,
             sampling_size=self.sampling_size,
@@ -249,6 +252,7 @@ class ExpConfigurator:
         return max_n_episodes, time.time() - start_time, 0
 
     def test_single_episode(self, episode_num: int, num_trials: int = -1) -> Tuple[bool, EnvConfiguration]:
+        print(self)
         obs = self.env.reset()
         done, state = False, None
         episode_reward = 0.0

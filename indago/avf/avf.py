@@ -123,6 +123,7 @@ class Avf:
         folder_extension: str,
         oversample_minority_class_percentage: float,
         layers: int,
+        hidden_layer_size: int,
         dnn_sampling: str,
         sampling_size: int,
         failure_prob_dist: bool,
@@ -143,6 +144,7 @@ class Avf:
         self.folder_extension = folder_extension
         self.oversample_minority_class_percentage = oversample_minority_class_percentage
         self.layers = layers
+        self.hidden_layer_size = hidden_layer_size
         self.dnn_sampling = dnn_sampling
         self.sampling_size = sampling_size
         self.failure_prob_dist = failure_prob_dist
@@ -157,7 +159,7 @@ class Avf:
         self.population_size = population_size
         self.crossover_rate = crossover_rate
 
-    def load_avf_policy(self, avf_train_policy: str, input_size: int, load_path: str, layers: int = 4,) -> AvfPolicy:
+    def load_avf_policy(self, avf_train_policy: str, input_size: int, load_path: str, layers: int = 4, hidden_layer_size:int = 64) -> AvfPolicy:
 
         if avf_train_policy in AVF_DNN_POLICIES:
             save_paths = None
@@ -167,6 +169,7 @@ class Avf:
                 input_size=input_size,
                 regression=self.regression,
                 layers=layers,
+                hidden_layer_size=hidden_layer_size
             )
             self.logger.info("Loading avf model: {}".format(load_path))
             avf_policy.load(filepath=load_path, save_paths=save_paths)

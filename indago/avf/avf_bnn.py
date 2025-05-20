@@ -31,26 +31,29 @@ class MC_Dropout(nn.Dropout):
 
 def make_mcdropout_mlp(input_size: int, layers: int = 1, regression: bool = False, hidden_layer_size: int = 64) -> nn.Module:
     """
-    Hardcoded MLP with MC Dropout used at both train and test time.
+    MLP with MC Dropout used at both train and test time.
     
-    Hyperparameters that can be tuned:
-        - hidden_size: Number of units per hidden layer
-        - drop_out rate: How much randomness injected (p), higher dropout increases uncertainty and regularisation, lower dropout is more confident but might overfit
-        - number of hidden layers: Repeat 3-line pattern
-        - activation function: e.g. replace nn.ReLU() with nn.Tanh() or nn.LeakyReLU()
+    Hyperparameters:
+        - hidden_layer_size: Number of units per hidden layer
+        - layers: Number of hidden layers
+        - dropout rate: Currently fixed at p=0.5, can be parameterized
+        - activation: Currently ReLU, can be swapped for others if needed
 
-        - possible extra: add nn.BatchNorm1d(hidden_size) between Linear and ReLU to stabilize training
+    The output layer has 1 unit if regression=True, otherwise 2 units for binary classification.
     """
-    hidden_size = hidden_layer_size
-    modules = [
-        nn.Linear(input_size, hidden_size),                 # Standard fully connected layer
-        nn.ReLU(),                                          # Activation Layer, applies non-linearity 
-        MC_Dropout(p=0.5),                                  # During training and testing, randomly zeros out p of the hidden activations -> introduces stochasticity -> turning the model bayesian (in some way)
-        nn.Linear(hidden_size, hidden_size),                # Start second layer
-        nn.ReLU(),                                          #
-        MC_Dropout(p=0.5),                                  # 
-        nn.Linear(hidden_size, 1 if regression else 2),     # Output layer, we have binary classification so 2
-    ]
+    modules = []
+
+    modules.append(nn.Linear(input_size, hidden_layer_size))                    # Input layer
+    modules.append(nn.ReLU())
+    modules.append(MC_Dropout(p=0.5))
+
+    for _ in range(layers - 1):
+        modules.append(nn.Linear(hidden_layer_size, hidden_layer_size))         # Hidden layers (layers - 1 because the first layer is already added)
+        modules.append(nn.ReLU())
+        modules.append(MC_Dropout(p=0.5))
+
+    modules.append(nn.Linear(hidden_layer_size, 1 if regression else 2))        # Output layer
+
     return nn.Sequential(*modules)
 
 
@@ -80,17 +83,18 @@ class BlitzBNN(nn.Module):
         - AUROC: 0.72
 
     """
-    def __init__(self, input_size: int, layers: int = 1, regression: bool = False, hidden_layer_size: int = 64):
+    def __init__(self, input_size: int, layers: int = 1, regression: bool = False, hidden_layer_size: int = 128):
+        print("jnbslbjhnlfkndvvdlff", hidden_layer_size)
+        print(layers)
+        hidden_layer_size = 64 # Hard coded for now when running it on the GA.
         super().__init__()
-        print("Hidden layer size is:", hidden_layer_size)
-        hidden = hidden_layer_size
         self.fcs = nn.ModuleList()
 
         
-        self.fcs.append(BayesianLinear(input_size, hidden))             # First layer: input_size -> hidden
-        for _ in range(layers - 1):                                     # Additional hidden layers: hidden -> hidden (layers - 1 times)
-            self.fcs.append(BayesianLinear(hidden, hidden))
-        self.out = BayesianLinear(hidden, 1 if regression else 2)       # Output layer
+        self.fcs.append(BayesianLinear(input_size, hidden_layer_size))              # First layer: input_size -> hidden
+        for _ in range(layers - 1):                                                 # Additional hidden layers: hidden -> hidden (layers - 1 times)
+            self.fcs.append(BayesianLinear(hidden_layer_size, hidden_layer_size))
+        self.out = BayesianLinear(hidden_layer_size, 1 if regression else 2)        # Output layer
 
     def forward(self, x):
         for layer in self.fcs:
@@ -108,7 +112,7 @@ class AvfBnnPolicy(AvfPolicy):
     """
     def __init__(
         self, env_name: str, input_size: int, regression: bool = False, layers: int = 4,
-        learning_rate: float = 3e-4, hidden_layer_size: int = 64, bnn_type: str = "blitz"
+        learning_rate: float = 3e-4, hidden_layer_size: int = 128, bnn_type: str = "blitz"
     ) -> None:
         super().__init__(
             loss_type="classification",
@@ -122,7 +126,7 @@ class AvfBnnPolicy(AvfPolicy):
         if env_name not in {PARK_ENV_NAME, HUMANOID_ENV_NAME, DONKEY_ENV_NAME}:
             raise NotImplementedError(f"Unknown env name: {env_name}")
 
-        if bnn_type is None:
+        if bnn_type is None or bnn_type == "":
             bnn_type = "blitz"
 
         if bnn_type == "mc-dropout":

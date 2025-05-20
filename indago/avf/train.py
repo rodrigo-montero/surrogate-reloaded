@@ -40,8 +40,9 @@ parser.add_argument("--learning-rate", help="Learning rate to train AVF DNN", ty
 parser.add_argument("--batch-size", help="Batch size to train AVF DNN", type=int, default=64)
 parser.add_argument("--weight-decay", help="Weight decay for optimizer when training AVF DNN", type=float, default=0.0)
 parser.add_argument("--weight-loss", help="Whether to use a simple weight loss scheme", action="store_true", default=False)
-parser.add_argument("--hidden-layer-size", help="Size of the hidden layers", type=int, default=64)                              # NEW
+parser.add_argument("--hidden-layer-size", help="Size of the hidden layers", type=int, default=128)                              # NEW
 parser.add_argument("--under", help="Whether to undersample or not", action="store_true", default=False)                        # NEW
+parser.add_argument("--augment", help="Whether to use data agumentation of not", action="store_true", default=False)            # NEW
 parser.add_argument("--model", help="String that determines the model (made for bnn)", type=str, choices=BNN_MODELS)            # NEW
 parser.add_argument(
     "--patience", help="Early stopping patience (# of epochs of no improvement) when training AVF DNN", type=int, default=20
@@ -440,7 +441,8 @@ if __name__ == "__main__":
                 )
 
                 augment_data = True
-                if augment_data:                                                                                                        # NEW (bnn)
+                if args.augment:   
+                    print("augmenting")                                                                                                     # NEW (bnn)
                     # This runs if the augment data flag is True, 
                     # The goal is to create synthetic data of the minority class.
                     logger.info("Applying synthetic data augmentation")
@@ -556,6 +558,7 @@ if __name__ == "__main__":
 
     logger.info("Time elapsed: {}s".format(time.time() - start_time))
 
+    
     # NEW (bnn)
     # This section will print the final results
     # These results will be picked up by the process running the grid search so that they can be stored in a file
@@ -574,4 +577,4 @@ if __name__ == "__main__":
         'seed': args.seed,
     }
     print("FINAL_RESULTS:" + json.dumps(final_results))
-
+    

@@ -188,7 +188,8 @@ class AvfPolicy(nn.Module, metaclass=abc.ABCMeta):
                         return self.model(x)
 
                 return CNNWrapper(models[layers - 1])
-            if avf_policy == "bnn":                                                                                     # NEW (bnn)
+            if avf_policy == "bnn": 
+                print("EHREREHRKEHRJEHRELHLSJKGKHSRGHSKGHSGH")                                                                                    # NEW (bnn)
                 raise NotImplementedError("BNN should be implemented in its avf file.")
             raise NotImplementedError("avf_policy {} not supported".format(avf_policy))
 

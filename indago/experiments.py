@@ -68,6 +68,7 @@ parser.add_argument(
     default=0.0,
 )
 parser.add_argument("--layers", help="Num layers architecture", type=int, choices=CLASSIFIER_LAYERS, default=1)
+parser.add_argument("--hidden-layer-size", help="Size of hidden layer in the model architecture", type=int, default=64)
 parser.add_argument("--regression", action="store_true", default=False)
 parser.add_argument(
     "--model-checkpoint",
@@ -138,6 +139,7 @@ def run_experiments(
     model_checkpoint: int,
     training_progress_filter: int,
     layers: int,
+    hidden_layer_size: int,
     oversample_minority_class_percentage: float,
     failure_prob_dist: bool,
     num_episodes: int,
@@ -184,6 +186,7 @@ def run_experiments(
         model_checkpoint=model_checkpoint,
         training_progress_filter=training_progress_filter,
         layers=layers,
+        hidden_layer_size=hidden_layer_size,
         oversample_minority_class_percentage=oversample_minority_class_percentage,
         failure_prob_dist=failure_prob_dist,
         num_episodes=num_episodes,
@@ -322,6 +325,7 @@ if __name__ == "__main__":
                     model_checkpoint=args.model_checkpoint,
                     training_progress_filter=args.training_progress_filter,
                     layers=args.layers,
+                    hidden_layer_size=args.hidden_layer_size,
                     oversample_minority_class_percentage=args.oversample,
                     failure_prob_dist=args.failure_prob_dist,
                     num_episodes=args.num_episodes,
@@ -361,6 +365,7 @@ if __name__ == "__main__":
                 model_checkpoint=args.model_checkpoint,
                 training_progress_filter=args.training_progress_filter,
                 layers=args.layers,
+                hidden_layer_size=args.hidden_layer_size,
                 oversample_minority_class_percentage=args.oversample,
                 failure_prob_dist=args.failure_prob_dist,
                 num_episodes=args.num_episodes,
@@ -400,6 +405,7 @@ if __name__ == "__main__":
                 model_checkpoint=args.model_checkpoint,
                 training_progress_filter=args.training_progress_filter,
                 layers=args.layers,
+                hidden_layer_size=args.hidden_layer_size,
                 oversample_minority_class_percentage=args.oversample,
                 failure_prob_dist=args.failure_prob_dist,
                 num_episodes=args.num_episodes,
