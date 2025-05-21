@@ -35,6 +35,7 @@ from indago.utils.file_utils import parse_experiment_file
 from indago.utils.torch_utils import to_numpy
 from log import Log
 
+from blitz.losses import kl_divergence_from_nn
 
 class Avf:
     def __init__(
@@ -1408,6 +1409,9 @@ class Avf:
                         # ===================forward=====================
                         loss, predictions = avf_policy.forward_and_loss(data=train_data, target=train_target, weights=weights)
 
+                        kl = kl_divergence_from_nn(avf_policy.get_model()) / len(train_dataset)
+                        loss = loss + kl
+                        
                         if predictions is not None:
                             if self.regression:
                                 train_accuracy += r2_score(y_true=to_numpy(train_target), y_pred=to_numpy(predictions))
@@ -1462,6 +1466,8 @@ class Avf:
                             loss, predictions = avf_policy.forward_and_loss(
                                 data=validation_data, target=validation_target, weights=weights
                             )
+                            kl = kl_divergence_from_nn(avf_policy.get_model()) / len(train_dataset)
+                            loss = loss + kl
 
                             if predictions is not None:
                                 if self.regression:
@@ -1514,6 +1520,7 @@ class Avf:
                 # if val_loss < best_val_loss:
                 if not self.regression:
                     if precision > best_val_precision:
+                        #if val_loss < best_val_loss:
                         best_val_loss = val_loss
                         best_val_precision = precision
                         best_avf_policy = copy.deepcopy(avf_policy)

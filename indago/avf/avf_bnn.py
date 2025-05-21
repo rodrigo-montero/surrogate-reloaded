@@ -2,6 +2,7 @@ import torch as th
 import torch.nn as nn
 from torch import Tensor
 
+from typing import Tuple, Optional
 from indago.avf.avf_policy import AvfPolicy
 from indago.config import DONKEY_ENV_NAME, HUMANOID_ENV_NAME, PARK_ENV_NAME
 from indago.utils.torch_utils import DEVICE
@@ -84,22 +85,30 @@ class BlitzBNN(nn.Module):
 
     """
     def __init__(self, input_size: int, layers: int = 1, regression: bool = False, hidden_layer_size: int = 128):
-        print("jnbslbjhnlfkndvvdlff", hidden_layer_size)
-        print(layers)
-        hidden_layer_size = 64 # Hard coded for now when running it on the GA.
         super().__init__()
+        self.regression = regression
         self.fcs = nn.ModuleList()
+        hidden_layer_size = 128
 
-        
-        self.fcs.append(BayesianLinear(input_size, hidden_layer_size))              # First layer: input_size -> hidden
-        for _ in range(layers - 1):                                                 # Additional hidden layers: hidden -> hidden (layers - 1 times)
+        # Fully connected Bayesian layers
+        self.fcs.append(BayesianLinear(input_size, hidden_layer_size))
+        for _ in range(layers - 1):
             self.fcs.append(BayesianLinear(hidden_layer_size, hidden_layer_size))
-        self.out = BayesianLinear(hidden_layer_size, 1 if regression else 2)        # Output layer
 
+        # Output layer
+        self.out = BayesianLinear(hidden_layer_size, 1 if regression else 2)
+
+        # Classification: use LogSoftmax → NLLLoss
+        if not regression:
+            self.log_softmax = nn.LogSoftmax(dim=1)
+    
     def forward(self, x):
         for layer in self.fcs:
             x = nn.ReLU()(layer(x))
-        return self.out(x)
+        x = self.out(x)
+        if not self.regression:
+            x = self.log_softmax(x)
+        return x
 
 
 
@@ -141,6 +150,35 @@ class AvfBnnPolicy(AvfPolicy):
 
     def get_model(self) -> nn.Module:
         return self.model
+    
+
+    def forward_and_loss(
+        self, data: Tensor, target: Tensor, training: bool = True, weights: Tensor = None
+    ) -> Tuple[Tensor, Optional[Tensor]]:
+        output = self.forward(data)  # log-probabilities if classification
+
+        if not self.regression:
+            if self.loss_type == "classification":
+                # During training: return NLLLoss and predictions
+                if training:
+                    # Output is log-softmax → use NLLLoss
+                    loss = self.loss_function(input=output, target=target, weights=weights)
+                    predictions = output.detach().argmax(dim=1)
+                    return loss, predictions
+
+                # During evaluation: return log-probs and predictions
+                predictions = output.detach().argmax(dim=1)
+                return output.detach(), predictions
+            else:
+                raise NotImplementedError("Loss type {} is not implemented".format(self.loss_type))
+
+        # === Regression ===
+        predictions = th.squeeze(self.forward(data))
+        if training:
+            return self.loss_function(input=predictions, target=target, weights=weights, regression=True), predictions
+        else:
+            return predictions
+
 
 
 
