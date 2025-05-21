@@ -31,11 +31,11 @@ MODEL = ["blitz"]
 AUGMENT = [True, False]
 WEIGHT_LOSS = [True, False]
 """
-LAYERS_LIST = [1]
+LAYERS_LIST = [1, 2, 3, 4]
 LR_LIST = [1e-3]
-UNDER = [False]
-OVERSAMPLE_LIST = [1.0]
-SEED_LIST = [22]
+UNDER = [True, False]
+OVERSAMPLE_LIST = [0.0, 0.5, 1.0]
+SEED_LIST = [21, 22, 23, 25, 25]
 HIDDEN_LAYER_SIZE = [128]
 TEST_SPLIT = [0.1]
 BATCH_SIZE = [128]
@@ -49,7 +49,7 @@ param_grid = list(itertools.product(
 ))
 
 # === Output setup ===
-output_file = "grid_search_with_ga.csv"
+output_file = "grid_search_with_ga_T6.csv"
 with open(output_file, "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerow([
@@ -88,14 +88,14 @@ for i, (model, layers, lr, under, oversample, seed, hidden, ts, bs, augment, wl)
     process.wait()
 
     # === Run GA ===
-    for i in range(1):
+    for i in range(5):
         ga_cmd = [
             "python", "-m", "indago.experiments",
             "--algo", "her", "--exp-id", "1", "--env-name", "park", "--env-id", "parking-v0",
             "--avf-train-policy", "bnn", "--avf-test-policy", "ga_saliency_rnd",
             "--failure-prob-dist", "--num-episodes", "50", "--num-runs-each-env-config", "1",
             "--training-progress-filter", "50", "--layers", str(layers),
-            "--budget", "3", "--num-runs-experiments", "50", "--oversample", str(oversample)
+            "--budget", "3", "--num-runs-experiments", "1", "--oversample", str(oversample)
         ]
         ga_mean = ga_std = ga_min = ga_max = None
         process = subprocess.Popen(ga_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)

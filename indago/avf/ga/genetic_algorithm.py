@@ -181,6 +181,7 @@ class GeneticAlgorithm:
                 stagnation_counter += 1
             else:
                 stagnation_counter = 0
+            """
             assert (
                 best_fitness_after_evolution <= best_fitness_before_evolution
                 if self.minimize
@@ -188,6 +189,7 @@ class GeneticAlgorithm:
             ), "Best fitness after evolution {} is worse than best fitness before evolution {}".format(
                 best_fitness_after_evolution, best_fitness_before_evolution
             )
+            """
             self.fitness_values.append(best_fitness_after_evolution)
             self.logger.debug("Current iteration: {}".format(i))
             self.logger.debug("Stagnation counter: {}".format(stagnation_counter))

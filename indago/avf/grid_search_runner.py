@@ -14,10 +14,10 @@ start_time = time.time()
 
 # Define all the parameters that will be searched
 LAYERS_LIST = [1, 2, 3, 4]                                    # Mainly 3 layers
-LR_LIST = [1e-3]
-UNDER = [True, False]                                         # Keep to False
+LR_LIST = [1e-2]
+UNDER = [False]                                         # Keep to False
 OVERSAMPLE_LIST = [0.0, 0.5, 1.0]                       # Maybe 1.0
-SEED_LIST = [20, 21, 22, 23, 24]
+SEED_LIST = [21, 22, 23]
 HIDDEN_LAYER_SIZE = [32, 64, 128]                           # Mainly 64
 TEST_SPLIT = [0.1]                                      # Doesn't really matter, but 0.2 is better
 BATCH_SIZE = [128]                                      # Mainly 128
@@ -98,7 +98,7 @@ for run_idx, (model, layers, lr, under, oversample, seed, hidden, ts, bs, augmen
         "--avf-policy", "bnn",
         "--training-progress-filter", "50",
         "--oversample", str(oversample),
-        "--n-epochs", "50",
+        "--n-epochs", "40",
         "--learning-rate", str(lr),
         "--batch-size", str(bs),
         "--patience", "10",

@@ -5,7 +5,7 @@ Write: 'indago/avf/show_grid_search_results.py' in the terminal
 
 import pandas as pd
 
-def show_grid_search_results2(file_path="grid_search_results.csv", sort_by="f_measure"):
+def show_grid_search_results(file_path="grid_search_results.csv", sort_by="auc_roc"):
     df = pd.read_csv(file_path)
 
     print("\n=== Grid Search Results (sorted by {}) ===\n".format(sort_by))
@@ -23,7 +23,7 @@ def show_grid_search_results2(file_path="grid_search_results.csv", sort_by="f_me
             print(f" - Min: {df[metric].min():.4f}")
             print("")
 
-def show_grid_search_results(file_path="grid_search_results.csv", sort_by="f_measure"):
+def show_grid_search_results2(file_path="grid_search_results.csv", sort_by="auc_roc"):
     df = pd.read_csv(file_path)
 
     print("\n=== Aggregated Grid Search Results (mean ± std) grouped by hyperparameters ===\n")
