@@ -88,7 +88,7 @@ class BlitzBNN(nn.Module):
         super().__init__()
         self.regression = regression
         self.fcs = nn.ModuleList()
-        hidden_layer_size = 128
+        #hidden_layer_size = 128
 
         # Fully connected Bayesian layers
         self.fcs.append(BayesianLinear(input_size, hidden_layer_size))
@@ -109,6 +109,18 @@ class BlitzBNN(nn.Module):
         if not self.regression:
             x = self.log_softmax(x)
         return x
+    
+    def predict_mc(self, x: Tensor, num_samples: int = 30) -> Tuple[Tensor, Tensor]:
+        """
+        Performs multiple forward passes through the BNN and returns:
+        - mean prediction
+        - standard deviation (uncertainty estimate)
+        """
+        print("Predicting with model in training mode:", self.training)
+        self.train()  # forces stochastic behavior during inference
+        outputs = [self.forward(x) for _ in range(num_samples)]
+        stacked = th.stack(outputs)
+        return stacked.mean(0), stacked.std(0)
 
 
 
