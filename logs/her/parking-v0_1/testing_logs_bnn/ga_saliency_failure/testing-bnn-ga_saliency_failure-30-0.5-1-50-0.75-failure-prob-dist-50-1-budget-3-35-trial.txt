@@ -1,0 +1,2800 @@
+INFO:instantiate_model:Loading model: logs/her/parking-v0_1/drl/best_model.zip
+INFO:instantiate_model:Setting random seed: 3140510141
+INFO:Avf:Progress filter for failure based approach ga_saliency_failure is 30
+INFO:preprocessor:Number of samples: 6948
+INFO:preprocessor:Data balancing: 0.029648819804260217
+INFO:preprocessor:Training progress filter 30. Considering env configurations from episode 1841 to episode 8788. Number of failures 206/6948
+INFO:Avf:Loading avf model: logs/her/parking-v0_1/surrogates/best-avf-bnn-50-0.5-1.pkl
+INFO:Avf:Model architecture: BlitzBNN(
+  (fcs): ModuleList(
+    (0): BayesianLinear(
+      (weight_sampler): TrainableRandomDistribution()
+      (bias_sampler): TrainableRandomDistribution()
+      (weight_prior_dist): PriorWeightDistribution()
+      (bias_prior_dist): PriorWeightDistribution()
+    )
+  )
+  (out): BayesianLinear(
+    (weight_sampler): TrainableRandomDistribution()
+    (bias_sampler): TrainableRandomDistribution()
+    (weight_prior_dist): PriorWeightDistribution()
+    (bias_prior_dist): PriorWeightDistribution()
+  )
+  (log_softmax): LogSoftmax(dim=1)
+)
+INFO:Avf:Generating 1 env configurations for failure probability distribution
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.2356
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9286
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0006
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9231
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9765
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7247
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9593
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9098
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9349
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8479
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8585
+INFO:Avf:Env configuration: 10#7#0.8#[0, 1, 3, 4, 8, 9, 10, 11, 13, 19]#(-6.94, 4.14); max prediction: 0.9997848868370056
+INFO:Avf:Times elapsed: 3.05 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2200
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9661
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8345
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8891
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8093
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7453
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8566
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7990
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8528
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8385
+INFO:Avf:Env configuration: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98); max prediction: 0.9998800754547119
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0007. Previous best fitness: 0.2146
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0007
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9549
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0007
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9120
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8603
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8557
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9041
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8825
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9128
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8951
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8411
+INFO:Avf:Env configuration: 10#5#0.74#[0, 1, 2, 3, 6, 9, 10, 11, 17, 18]#(-6.36, 4.16); max prediction: 0.999796450138092
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.2150
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9747
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9463
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9030
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8065
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7570
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7699
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8952
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7218
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8750
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 15, 19]#(0.83, 4.94); max prediction: 0.9999232292175293
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.4213
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8864
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9005
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8722
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8710
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8451
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9337
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8222
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7579
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7511
+INFO:Avf:Env configuration: 10#7#0.73#[0, 1, 2, 3, 4, 5, 6, 8, 9, 12, 15, 17, 19]#(-4.76, 3.82); max prediction: 0.9998528957366943
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.1218
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9651
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0007. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0007
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9688
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0007
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9400
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9341
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8209
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7531
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8806
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8399
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8810
+INFO:Avf:Env configuration: 10#4#0.54#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-6.35, 4.07); max prediction: 0.9997885823249817
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.2461
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9260
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9221
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9210
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9647
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9363
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8906
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9193
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5714
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5513
+INFO:Avf:Env configuration: 10#7#0.69#[0, 2, 4, 5, 8, 11, 12, 13, 14]#(-0.39, 3.44); max prediction: 0.9995861649513245
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2808
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9887
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8533
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9602
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9729
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9212
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9525
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8642
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7886
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8081
+INFO:Avf:Env configuration: 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-5.77, 3.05); max prediction: 0.9994297623634338
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.1400
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9490
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8571
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8690
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9075
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6725
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7896
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6842
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9234
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9242
+INFO:Avf:Env configuration: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-7.29, 4.63); max prediction: 0.9998592138290405
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2584
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9215
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9012
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9589
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9534
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9378
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9067
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9021
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.4515
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.4957
+INFO:Avf:Env configuration: 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 19]#(-2.08, 3.55); max prediction: 0.9993956089019775
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2671
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9751
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9768
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9772
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9693
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9297
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9499
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7067
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8159
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7427
+INFO:Avf:Env configuration: 10#4#0.7#[0, 3, 6, 7, 8, 12, 14]#(-1.93, 4.12); max prediction: 0.9997879862785339
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2183
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9775
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8767
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9140
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.3201
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.4382
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8123
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8250
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7868
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7516
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94); max prediction: 0.9998737573623657
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.1861
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9269
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9760
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9674
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9599
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9566
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8858
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8395
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8255
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7624
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.19, 4.15); max prediction: 0.9996805191040039
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2075
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9785
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9821
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0006
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9813
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9400
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9499
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9147
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9044
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9459
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9348
+INFO:Avf:Env configuration: 10#4#0.93#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-5.84, 3.98); max prediction: 0.9996817111968994
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2458
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9897
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9881
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8413
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.4393
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6759
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5379
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.4998
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.0055
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.0049
+INFO:Avf:Env configuration: 10#5#0.93#[0, 1, 2, 3, 6, 8, 9, 10, 11, 12, 15, 16, 18, 19]#(-8.4, 3.9); max prediction: 0.9998444318771362
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.2291
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9740
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9662
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9680
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8155
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8335
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7470
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6921
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5469
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5995
+INFO:Avf:Env configuration: 10#5#0.77#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 14]#(-5.31, 3.17); max prediction: 0.9998636245727539
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2564
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9586
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9608
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8792
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7878
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9619
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9470
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7944
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8463
+INFO:Avf:Env configuration: 10#4#0.67#[0, 3, 6, 7, 9, 12, 13, 14, 15]#(-2.69, 4.55); max prediction: 0.9998192191123962
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.2671
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9515
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9075
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8984
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8283
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7963
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9463
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7638
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6935
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6999
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-1.44, 4.84); max prediction: 0.999868631362915
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.2958
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9488
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8724
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9403
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0008. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0008
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7999
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.0008
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9607
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0006
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9617
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9215
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9135
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8940
+INFO:Avf:Env configuration: 10#4#0.59#[0, 3, 5, 9, 14]#(-0.12, 3.63); max prediction: 0.999096155166626
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.1389
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9222
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8671
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9080
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6913
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7907
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8185
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8531
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8538
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7884
+INFO:Avf:Env configuration: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-4.44, 4.78); max prediction: 0.999828577041626
+INFO:Avf:Times elapsed: 3.09 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.1862
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9584
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8751
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7871
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8601
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6935
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8198
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7964
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7899
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7306
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94); max prediction: 0.9997970461845398
+INFO:Avf:Times elapsed: 3.04 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2292
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9750
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9842
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9486
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9214
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9852
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8247
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7674
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7853
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7036
+INFO:Avf:Env configuration: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98); max prediction: 0.9998589754104614
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.1835
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9733
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8773
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8184
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9440
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6272
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9699
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9626
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8478
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8797
+INFO:Avf:Env configuration: 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-2.63, 4.14); max prediction: 0.9998471736907959
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2055
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9159
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9097
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9045
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8768
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9075
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8627
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8109
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5748
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5731
+INFO:Avf:Env configuration: 10#2#0.76#[0, 1, 3, 4, 6, 8, 9, 14, 16, 17, 18, 19]#(-3.62, 4.09); max prediction: 0.9997383952140808
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2566
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9744
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9683
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9553
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9253
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8321
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9152
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8426
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7322
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6937
+INFO:Avf:Env configuration: 10#4#0.79#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-5.84, 4.65); max prediction: 0.999834418296814
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0017. Previous best fitness: 0.2667
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0017
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9648
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0011. Previous best fitness: 0.0017
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0011
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8907
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0011. Previous best fitness: 0.0011
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0011
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9241
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.0011
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8395
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8412
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0010. Previous best fitness: 0.0006
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0010
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8695
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.0010
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8314
+INFO:Avf:Env configuration: 10#2#0.35#[0, 5, 6, 8, 9, 10, 14, 15]#(7.31, 3.98); max prediction: 0.9992092847824097
+INFO:Avf:Times elapsed: 3.05 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.1417
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9830
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9749
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9083
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8201
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8507
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7727
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7753
+INFO:Avf:Env configuration: 10#11#0.82#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 19]#(-3.51, 2.24); max prediction: 0.999544084072113
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.2313
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9550
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9360
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9625
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9713
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9622
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7012
+INFO:Avf:Env configuration: 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-7.49, 4.21); max prediction: 0.9996854066848755
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.1960
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9049
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9443
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9521
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9316
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7884
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9694
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7461
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7764
+INFO:Avf:Env configuration: 10#5#0.77#[0, 1, 2, 3, 4, 8, 9, 10, 12, 14, 16]#(0.31, 4.1); max prediction: 0.9997498393058777
+INFO:Avf:Times elapsed: 3.04 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2280
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8947
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9274
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9831
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9352
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9347
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7725
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7627
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7594
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8201
+INFO:Avf:Env configuration: 10#11#0.21#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 19]#(-2.52, 3.42); max prediction: 0.9993847608566284
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2384
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9425
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9701
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9427
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7577
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7854
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8271
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6469
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6970
+INFO:Avf:Env configuration: 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-3.2, 4.57); max prediction: 0.9998538494110107
+INFO:Avf:Times elapsed: 3.02 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2154
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9211
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8694
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9051
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8054
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7438
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5921
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5682
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94); max prediction: 0.9997532963752747
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2702
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9156
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9052
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8445
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8115
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8492
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8511
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6946
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7299
+INFO:Avf:Env configuration: 10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(-3.33, 3.76); max prediction: 0.9997352957725525
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.2836
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9722
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9808
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9686
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9641
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9587
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9553
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9770
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9697
+INFO:Avf:Env configuration: 10#3#0.73#[0, 1, 4, 5, 10, 13, 14, 18]#(-6.2, 4.67); max prediction: 0.9997701048851013
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2704
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9338
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8997
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8355
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9127
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8274
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7944
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8214
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8341
+INFO:Avf:Env configuration: 10#4#0.64#[0, 2, 3, 11, 13, 18]#(-0.19, 3.53); max prediction: 0.999450147151947
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2310
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8945
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8536
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8705
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8873
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8958
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8909
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8648
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.4846
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.3681
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.6, 3.31); max prediction: 0.9996963739395142
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.2296
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9131
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9568
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8897
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8025
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7609
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7571
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.3753
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7676
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7984
+INFO:Avf:Env configuration: 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 18, 19]#(-8.18, 3.6); max prediction: 0.9998478889465332
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.1510
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9750
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0006
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9743
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8558
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8493
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9244
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7702
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6155
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7385
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6863
+INFO:Avf:Env configuration: 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 18]#(-3.5, 0.47); max prediction: 0.9996373653411865
+INFO:Avf:Times elapsed: 3.07 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.3372
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9783
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8837
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8377
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9583
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9211
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9374
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9468
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9701
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9581
+INFO:Avf:Env configuration: 10#5#0.88#[0, 2, 6, 7, 8, 9, 12, 13, 15, 16, 17, 18, 19]#(-0.5, 2.86); max prediction: 0.9994638562202454
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.2891
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9850
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.0006
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9877
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8660
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9794
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8969
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8983
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8349
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7824
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8092
+INFO:Avf:Env configuration: 10#3#0.72#[0, 2, 5, 6, 9, 10, 12, 13, 15, 18, 19]#(0.46, 3.7); max prediction: 0.9996039271354675
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.1900
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8420
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9371
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7796
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7817
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9532
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9516
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9456
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0000. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0000
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.3552
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0000
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.3592
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-4.77, 4.54); max prediction: 0.9999102354049683
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.2027
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9530
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8361
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9141
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8505
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9278
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8948
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9264
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8873
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8477
+INFO:Avf:Env configuration: 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-8.03, 4.18); max prediction: 0.9996745586395264
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0008. Previous best fitness: 0.1992
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0008
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9355
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0008
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9396
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9399
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8314
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8109
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5597
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8279
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6517
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6285
+INFO:Avf:Env configuration: 10#7#0.92#[0, 3, 4, 6, 8, 12, 13, 14, 18]#(5.66, 2.67); max prediction: 0.9991090893745422
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0006. Previous best fitness: 0.2889
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0006
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9481
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0006
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9600
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9408
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9615
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7391
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8254
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5997
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7260
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7464
+INFO:Avf:Env configuration: 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-6.53, 4.37); max prediction: 0.9997925162315369
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.1973
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9846
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9728
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9740
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9799
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9828
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9774
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9728
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6203
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8232
+INFO:Avf:Env configuration: 10#4#0.74#[0, 2, 8, 12, 13, 14, 15, 17, 19]#(-3.14, 4.66); max prediction: 0.9996747970581055
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.1695
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9640
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9167
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8744
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9447
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9208
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9427
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9248
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8655
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6301
+INFO:Avf:Env configuration: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-1.6, 4.86); max prediction: 0.9998469352722168
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.2045
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8925
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9791
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9197
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8993
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9080
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9583
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8750
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8878
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0000. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0000
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9489
+INFO:Avf:Env configuration: 10#4#0.67#[0, 2, 3, 5, 7, 8, 9, 10, 12, 15, 19]#(-1.97, 4.67); max prediction: 0.9998440742492676
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0005. Previous best fitness: 0.2475
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0005
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9608
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0004. Previous best fitness: 0.0005
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0004
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9504
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0004
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8266
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8152
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8476
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8807
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8776
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8641
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0001. Previous best fitness: 0.0001
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0001
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8179
+INFO:Avf:Env configuration: 10#5#0.68#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19]#(-3.09, 4.12); max prediction: 0.9998249411582947
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0007. Previous best fitness: 0.1792
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0007
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9390
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0007
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9435
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9314
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9434
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9411
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7711
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7201
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7306
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7072
+INFO:Avf:Env configuration: 10#4#0.7#[0, 3, 6, 7, 8, 12]#(-0.23, 3.63); max prediction: 0.9995383024215698
+INFO:Avf:Times elapsed: 3.01 s
+DEBUG:GeneticAlgorithm:Generating population
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.2537
+DEBUG:GeneticAlgorithm:Current iteration: 0
+DEBUG:GeneticAlgorithm:Stagnation counter: 0
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9835
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 1
+DEBUG:GeneticAlgorithm:Stagnation counter: 1
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.9529
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 2
+DEBUG:GeneticAlgorithm:Stagnation counter: 2
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.8805
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 3
+DEBUG:GeneticAlgorithm:Stagnation counter: 3
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6633
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 4
+DEBUG:GeneticAlgorithm:Stagnation counter: 4
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.5432
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 5
+DEBUG:GeneticAlgorithm:Stagnation counter: 5
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6434
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 6
+DEBUG:GeneticAlgorithm:Stagnation counter: 6
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.4930
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0002. Previous best fitness: 0.0003
+DEBUG:GeneticAlgorithm:Current iteration: 7
+DEBUG:GeneticAlgorithm:Stagnation counter: 7
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0002
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.6459
+DEBUG:GeneticAlgorithm:Current best fitness: 0.0003. Previous best fitness: 0.0002
+DEBUG:GeneticAlgorithm:Current iteration: 8
+DEBUG:GeneticAlgorithm:Stagnation counter: 8
+DEBUG:GeneticAlgorithm:Best individual has fitness: 0.0003
+DEBUG:GeneticAlgorithm:Worst individual has fitness: 0.7538
+INFO:Avf:Env configuration: 10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(3.19, 3.62); max prediction: 0.9994658827781677
+INFO:Avf:Times elapsed: 3.01 s
+INFO:Avf:Times elapsed (s): [3.05, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.09, 3.04, 3.01, 3.01, 3.01, 3.01, 3.05, 3.01, 3.01, 3.04, 3.01, 3.02, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.07, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01, 3.01], Mean: 3.02, Std: 0.02, Min: 3.01, Max: 3.09
+INFO:Avf:1/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.12
+DEBUG:ExpConfigurator:Episode Length: 15
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#7#0.8#[0, 1, 3, 4, 8, 9, 10, 11, 13, 19]#(-6.94, 4.14)
+DEBUG:experiments:Num experiments: 1/50
+INFO:experiments:Failure probability for env config 10#7#0.8#[0, 1, 3, 4, 8, 9, 10, 11, 13, 19]#(-6.94, 4.14): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:2/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.16
+DEBUG:ExpConfigurator:Episode Length: 11
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98)
+DEBUG:experiments:Num experiments: 2/50
+INFO:experiments:Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:3/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -11.28
+DEBUG:ExpConfigurator:Episode Length: 19
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#5#0.74#[0, 1, 2, 3, 6, 9, 10, 11, 17, 18]#(-6.36, 4.16)
+DEBUG:experiments:Num experiments: 3/50
+INFO:experiments:Failure probability for env config 10#5#0.74#[0, 1, 2, 3, 6, 9, 10, 11, 17, 18]#(-6.36, 4.16): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:4/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.06
+DEBUG:ExpConfigurator:Episode Length: 13
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 15, 19]#(0.83, 4.94)
+DEBUG:experiments:Num experiments: 4/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 15, 19]#(0.83, 4.94): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:5/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.23
+DEBUG:ExpConfigurator:Episode Length: 16
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#7#0.73#[0, 1, 2, 3, 4, 5, 6, 8, 9, 12, 15, 17, 19]#(-4.76, 3.82)
+DEBUG:experiments:Num experiments: 5/50
+INFO:experiments:Failure probability for env config 10#7#0.73#[0, 1, 2, 3, 4, 5, 6, 8, 9, 12, 15, 17, 19]#(-4.76, 3.82): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:6/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -4.31
+DEBUG:ExpConfigurator:Episode Length: 18
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.54#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-6.35, 4.07)
+DEBUG:experiments:Num experiments: 6/50
+INFO:experiments:Failure probability for env config 10#4#0.54#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-6.35, 4.07): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:7/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -6.27
+DEBUG:ExpConfigurator:Episode Length: 20
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#7#0.69#[0, 2, 4, 5, 8, 11, 12, 13, 14]#(-0.39, 3.44)
+DEBUG:experiments:Num experiments: 7/50
+INFO:experiments:Failure probability for env config 10#7#0.69#[0, 2, 4, 5, 8, 11, 12, 13, 14]#(-0.39, 3.44): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:8/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.23
+DEBUG:ExpConfigurator:Episode Length: 17
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-5.77, 3.05)
+DEBUG:experiments:Num experiments: 8/50
+INFO:experiments:Failure probability for env config 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-5.77, 3.05): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:9/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.29
+DEBUG:ExpConfigurator:Episode Length: 21
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-7.29, 4.63)
+DEBUG:experiments:Num experiments: 9/50
+INFO:experiments:Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-7.29, 4.63): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:10/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -4.54
+DEBUG:ExpConfigurator:Episode Length: 18
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 19]#(-2.08, 3.55)
+DEBUG:experiments:Num experiments: 10/50
+INFO:experiments:Failure probability for env config 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 19]#(-2.08, 3.55): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:11/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -7.76
+DEBUG:ExpConfigurator:Episode Length: 23
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.7#[0, 3, 6, 7, 8, 12, 14]#(-1.93, 4.12)
+DEBUG:experiments:Num experiments: 11/50
+INFO:experiments:Failure probability for env config 10#4#0.7#[0, 3, 6, 7, 8, 12, 14]#(-1.93, 4.12): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:12/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.06
+DEBUG:ExpConfigurator:Episode Length: 13
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94)
+DEBUG:experiments:Num experiments: 12/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:13/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -7.82
+DEBUG:ExpConfigurator:Episode Length: 24
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.19, 4.15)
+DEBUG:experiments:Num experiments: 13/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.19, 4.15): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:14/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -4.52
+DEBUG:ExpConfigurator:Episode Length: 18
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.93#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-5.84, 3.98)
+DEBUG:experiments:Num experiments: 14/50
+INFO:experiments:Failure probability for env config 10#4#0.93#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-5.84, 3.98): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:15/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -3.19
+DEBUG:ExpConfigurator:Episode Length: 12
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#5#0.93#[0, 1, 2, 3, 6, 8, 9, 10, 11, 12, 15, 16, 18, 19]#(-8.4, 3.9)
+DEBUG:experiments:Num experiments: 15/50
+INFO:experiments:Failure probability for env config 10#5#0.93#[0, 1, 2, 3, 6, 8, 9, 10, 11, 12, 15, 16, 18, 19]#(-8.4, 3.9): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:16/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -14.74
+DEBUG:ExpConfigurator:Episode Length: 30
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#5#0.77#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 14]#(-5.31, 3.17)
+DEBUG:experiments:Num experiments: 16/50
+INFO:experiments:Failure probability for env config 10#5#0.77#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 14]#(-5.31, 3.17): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:17/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -8.08
+DEBUG:ExpConfigurator:Episode Length: 24
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.67#[0, 3, 6, 7, 9, 12, 13, 14, 15]#(-2.69, 4.55)
+DEBUG:experiments:Num experiments: 17/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 3, 6, 7, 9, 12, 13, 14, 15]#(-2.69, 4.55): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:18/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -8.08
+DEBUG:ExpConfigurator:Episode Length: 24
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-1.44, 4.84)
+DEBUG:experiments:Num experiments: 18/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-1.44, 4.84): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:19/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -3.25
+DEBUG:ExpConfigurator:Episode Length: 12
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.59#[0, 3, 5, 9, 14]#(-0.12, 3.63)
+DEBUG:experiments:Num experiments: 19/50
+INFO:experiments:Failure probability for env config 10#4#0.59#[0, 3, 5, 9, 14]#(-0.12, 3.63): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:20/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -8.67
+DEBUG:ExpConfigurator:Episode Length: 10
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-4.44, 4.78)
+DEBUG:experiments:Num experiments: 20/50
+INFO:experiments:Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-4.44, 4.78): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:21/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.06
+DEBUG:ExpConfigurator:Episode Length: 13
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94)
+DEBUG:experiments:Num experiments: 21/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:22/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.16
+DEBUG:ExpConfigurator:Episode Length: 11
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98)
+DEBUG:experiments:Num experiments: 22/50
+INFO:experiments:Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:23/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -4.99
+DEBUG:ExpConfigurator:Episode Length: 20
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-2.63, 4.14)
+DEBUG:experiments:Num experiments: 23/50
+INFO:experiments:Failure probability for env config 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-2.63, 4.14): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:24/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.06
+DEBUG:ExpConfigurator:Episode Length: 16
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#2#0.76#[0, 1, 3, 4, 6, 8, 9, 14, 16, 17, 18, 19]#(-3.62, 4.09)
+DEBUG:experiments:Num experiments: 24/50
+INFO:experiments:Failure probability for env config 10#2#0.76#[0, 1, 3, 4, 6, 8, 9, 14, 16, 17, 18, 19]#(-3.62, 4.09): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:25/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -7.42
+DEBUG:ExpConfigurator:Episode Length: 9
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.79#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-5.84, 4.65)
+DEBUG:experiments:Num experiments: 25/50
+INFO:experiments:Failure probability for env config 10#4#0.79#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-5.84, 4.65): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:26/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -6.72
+DEBUG:ExpConfigurator:Episode Length: 17
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#2#0.35#[0, 5, 6, 8, 9, 10, 14, 15]#(7.31, 3.98)
+DEBUG:experiments:Num experiments: 26/50
+INFO:experiments:Failure probability for env config 10#2#0.35#[0, 5, 6, 8, 9, 10, 14, 15]#(7.31, 3.98): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:27/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.68
+DEBUG:ExpConfigurator:Episode Length: 16
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#11#0.82#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 19]#(-3.51, 2.24)
+DEBUG:experiments:Num experiments: 27/50
+INFO:experiments:Failure probability for env config 10#11#0.82#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 19]#(-3.51, 2.24): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:28/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -10.18
+DEBUG:ExpConfigurator:Episode Length: 16
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-7.49, 4.21)
+DEBUG:experiments:Num experiments: 28/50
+INFO:experiments:Failure probability for env config 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-7.49, 4.21): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:29/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -16.82
+DEBUG:ExpConfigurator:Episode Length: 39
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#5#0.77#[0, 1, 2, 3, 4, 8, 9, 10, 12, 14, 16]#(0.31, 4.1)
+DEBUG:experiments:Num experiments: 29/50
+INFO:experiments:Failure probability for env config 10#5#0.77#[0, 1, 2, 3, 4, 8, 9, 10, 12, 14, 16]#(0.31, 4.1): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:30/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -7.09
+DEBUG:ExpConfigurator:Episode Length: 19
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#11#0.21#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 19]#(-2.52, 3.42)
+DEBUG:experiments:Num experiments: 30/50
+INFO:experiments:Failure probability for env config 10#11#0.21#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 19]#(-2.52, 3.42): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:31/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -4.98
+DEBUG:ExpConfigurator:Episode Length: 20
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-3.2, 4.57)
+DEBUG:experiments:Num experiments: 31/50
+INFO:experiments:Failure probability for env config 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-3.2, 4.57): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:32/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.06
+DEBUG:ExpConfigurator:Episode Length: 13
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94)
+DEBUG:experiments:Num experiments: 32/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:33/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -2.71
+DEBUG:ExpConfigurator:Episode Length: 11
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(-3.33, 3.76)
+DEBUG:experiments:Num experiments: 33/50
+INFO:experiments:Failure probability for env config 10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(-3.33, 3.76): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:34/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -7.84
+DEBUG:ExpConfigurator:Episode Length: 24
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#3#0.73#[0, 1, 4, 5, 10, 13, 14, 18]#(-6.2, 4.67)
+DEBUG:experiments:Num experiments: 34/50
+INFO:experiments:Failure probability for env config 10#3#0.73#[0, 1, 4, 5, 10, 13, 14, 18]#(-6.2, 4.67): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:35/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -8.67
+DEBUG:ExpConfigurator:Episode Length: 12
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.64#[0, 2, 3, 11, 13, 18]#(-0.19, 3.53)
+DEBUG:experiments:Num experiments: 35/50
+INFO:experiments:Failure probability for env config 10#4#0.64#[0, 2, 3, 11, 13, 18]#(-0.19, 3.53): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:36/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -7.74
+DEBUG:ExpConfigurator:Episode Length: 23
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.6, 3.31)
+DEBUG:experiments:Num experiments: 36/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.6, 3.31): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:37/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -3.18
+DEBUG:ExpConfigurator:Episode Length: 12
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 18, 19]#(-8.18, 3.6)
+DEBUG:experiments:Num experiments: 37/50
+INFO:experiments:Failure probability for env config 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 18, 19]#(-8.18, 3.6): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:38/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.42
+DEBUG:ExpConfigurator:Episode Length: 21
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 18]#(-3.5, 0.47)
+DEBUG:experiments:Num experiments: 38/50
+INFO:experiments:Failure probability for env config 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 18]#(-3.5, 0.47): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:39/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -5.17
+DEBUG:ExpConfigurator:Episode Length: 20
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#5#0.88#[0, 2, 6, 7, 8, 9, 12, 13, 15, 16, 17, 18, 19]#(-0.5, 2.86)
+DEBUG:experiments:Num experiments: 39/50
+INFO:experiments:Failure probability for env config 10#5#0.88#[0, 2, 6, 7, 8, 9, 12, 13, 15, 16, 17, 18, 19]#(-0.5, 2.86): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:40/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -4.62
+DEBUG:ExpConfigurator:Episode Length: 14
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#3#0.72#[0, 2, 5, 6, 9, 10, 12, 13, 15, 18, 19]#(0.46, 3.7)
+DEBUG:experiments:Num experiments: 40/50
+INFO:experiments:Failure probability for env config 10#3#0.72#[0, 2, 5, 6, 9, 10, 12, 13, 15, 18, 19]#(0.46, 3.7): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:41/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -10.38
+DEBUG:ExpConfigurator:Episode Length: 18
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-4.77, 4.54)
+DEBUG:experiments:Num experiments: 41/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-4.77, 4.54): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:42/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -10.18
+DEBUG:ExpConfigurator:Episode Length: 16
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-8.03, 4.18)
+DEBUG:experiments:Num experiments: 42/50
+INFO:experiments:Failure probability for env config 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-8.03, 4.18): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:43/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -4.69
+DEBUG:ExpConfigurator:Episode Length: 18
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#7#0.92#[0, 3, 4, 6, 8, 12, 13, 14, 18]#(5.66, 2.67)
+DEBUG:experiments:Num experiments: 43/50
+INFO:experiments:Failure probability for env config 10#7#0.92#[0, 3, 4, 6, 8, 12, 13, 14, 18]#(5.66, 2.67): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:44/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.87
+DEBUG:ExpConfigurator:Episode Length: 15
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-6.53, 4.37)
+DEBUG:experiments:Num experiments: 44/50
+INFO:experiments:Failure probability for env config 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-6.53, 4.37): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:45/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -8.10
+DEBUG:ExpConfigurator:Episode Length: 24
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.74#[0, 2, 8, 12, 13, 14, 15, 17, 19]#(-3.14, 4.66)
+DEBUG:experiments:Num experiments: 45/50
+INFO:experiments:Failure probability for env config 10#4#0.74#[0, 2, 8, 12, 13, 14, 15, 17, 19]#(-3.14, 4.66): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:46/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.32
+DEBUG:ExpConfigurator:Episode Length: 11
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-1.6, 4.86)
+DEBUG:experiments:Num experiments: 46/50
+INFO:experiments:Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-1.6, 4.86): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:47/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -7.91
+DEBUG:ExpConfigurator:Episode Length: 24
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#4#0.67#[0, 2, 3, 5, 7, 8, 9, 10, 12, 15, 19]#(-1.97, 4.67)
+DEBUG:experiments:Num experiments: 47/50
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 7, 8, 9, 10, 12, 15, 19]#(-1.97, 4.67): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:48/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -6.98
+DEBUG:ExpConfigurator:Episode Length: 32
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#5#0.68#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19]#(-3.09, 4.12)
+DEBUG:experiments:Num experiments: 48/50
+INFO:experiments:Failure probability for env config 10#5#0.68#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19]#(-3.09, 4.12): (0.0, (0.0, 0.7934506856227627))
+INFO:Avf:49/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -9.82
+DEBUG:ExpConfigurator:Episode Length: 15
+DEBUG:ExpConfigurator:Failure: True
+DEBUG:experiments:Env config: 10#4#0.7#[0, 3, 6, 7, 8, 12]#(-0.23, 3.63)
+DEBUG:experiments:Num experiments: 49/50
+INFO:experiments:Failure probability for env config 10#4#0.7#[0, 3, 6, 7, 8, 12]#(-0.23, 3.63): (1.0, (0.2065493143772374, 1.0))
+INFO:Avf:50/50
+DEBUG:ExpConfigurator:Episode #1
+DEBUG:ExpConfigurator:Episode Reward: -2.16
+DEBUG:ExpConfigurator:Episode Length: 11
+DEBUG:ExpConfigurator:Failure: False
+DEBUG:experiments:Env config: 10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(3.19, 3.62)
+DEBUG:experiments:Num experiments: 50/50
+INFO:experiments:Failure probability for env config 10#7#0.8#[0, 1, 3, 4, 8, 9, 10, 11, 13, 19]#(-6.94, 4.14): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:FAIL - Failure probability for env config 10#5#0.74#[0, 1, 2, 3, 6, 9, 10, 11, 17, 18]#(-6.36, 4.16): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:FAIL - Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 15, 19]#(0.83, 4.94): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#7#0.73#[0, 1, 2, 3, 4, 5, 6, 8, 9, 12, 15, 17, 19]#(-4.76, 3.82): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#4#0.54#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-6.35, 4.07): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#7#0.69#[0, 2, 4, 5, 8, 11, 12, 13, 14]#(-0.39, 3.44): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-5.77, 3.05): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-7.29, 4.63): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 19]#(-2.08, 3.55): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#4#0.7#[0, 3, 6, 7, 8, 12, 14]#(-1.93, 4.12): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.19, 4.15): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#4#0.93#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-5.84, 3.98): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#5#0.93#[0, 1, 2, 3, 6, 8, 9, 10, 11, 12, 15, 16, 18, 19]#(-8.4, 3.9): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#5#0.77#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 14]#(-5.31, 3.17): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 3, 6, 7, 9, 12, 13, 14, 15]#(-2.69, 4.55): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-1.44, 4.84): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#4#0.59#[0, 3, 5, 9, 14]#(-0.12, 3.63): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-4.44, 4.78): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-2.63, 4.14): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#2#0.76#[0, 1, 3, 4, 6, 8, 9, 14, 16, 17, 18, 19]#(-3.62, 4.09): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#4#0.79#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-5.84, 4.65): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#2#0.35#[0, 5, 6, 8, 9, 10, 14, 15]#(7.31, 3.98): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#11#0.82#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 19]#(-3.51, 2.24): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-7.49, 4.21): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:FAIL - Failure probability for env config 10#5#0.77#[0, 1, 2, 3, 4, 8, 9, 10, 12, 14, 16]#(0.31, 4.1): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#11#0.21#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 19]#(-2.52, 3.42): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-3.2, 4.57): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(-3.33, 3.76): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#3#0.73#[0, 1, 4, 5, 10, 13, 14, 18]#(-6.2, 4.67): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#4#0.64#[0, 2, 3, 11, 13, 18]#(-0.19, 3.53): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.6, 3.31): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 18, 19]#(-8.18, 3.6): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 18]#(-3.5, 0.47): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#5#0.88#[0, 2, 6, 7, 8, 9, 12, 13, 15, 16, 17, 18, 19]#(-0.5, 2.86): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#3#0.72#[0, 2, 5, 6, 9, 10, 12, 13, 15, 18, 19]#(0.46, 3.7): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-4.77, 4.54): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:FAIL - Failure probability for env config 10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-8.03, 4.18): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#7#0.92#[0, 3, 4, 6, 8, 12, 13, 14, 18]#(5.66, 2.67): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-6.53, 4.37): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#4#0.74#[0, 2, 8, 12, 13, 14, 15, 17, 19]#(-3.14, 4.66): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-1.6, 4.86): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#4#0.67#[0, 2, 3, 5, 7, 8, 9, 10, 12, 15, 19]#(-1.97, 4.67): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probability for env config 10#5#0.68#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19]#(-3.09, 4.12): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:FAIL - Failure probability for env config 10#4#0.7#[0, 3, 6, 7, 8, 12]#(-0.23, 3.63): (1.0, (0.2065493143772374, 1.0))
+INFO:experiments:Failure probability for env config 10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(3.19, 3.62): (0.0, (0.0, 0.7934506856227627))
+INFO:experiments:Failure probabilities: [0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0], Mean: 0.32, Std: 0.47, Min: 0.0, Max: 1.0
+INFO:experiments:dict_keys(['10#7#0.8#[0, 1, 3, 4, 8, 9, 10, 11, 13, 19]#(-6.94, 4.14)', '10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-2.67, 4.98)', '10#5#0.74#[0, 1, 2, 3, 6, 9, 10, 11, 17, 18]#(-6.36, 4.16)', '10#4#0.67#[0, 2, 3, 5, 6, 7, 8, 9, 10, 12, 15, 19]#(0.83, 4.94)', '10#7#0.73#[0, 1, 2, 3, 4, 5, 6, 8, 9, 12, 15, 17, 19]#(-4.76, 3.82)', '10#4#0.54#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-6.35, 4.07)', '10#7#0.69#[0, 2, 4, 5, 8, 11, 12, 13, 14]#(-0.39, 3.44)', '10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-5.77, 3.05)', '10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-7.29, 4.63)', '10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 19]#(-2.08, 3.55)', '10#4#0.7#[0, 3, 6, 7, 8, 12, 14]#(-1.93, 4.12)', '10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(0.83, 4.94)', '10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.19, 4.15)', '10#4#0.93#[0, 1, 2, 3, 5, 6, 7, 10, 13, 16, 17, 19]#(-5.84, 3.98)', '10#5#0.93#[0, 1, 2, 3, 6, 8, 9, 10, 11, 12, 15, 16, 18, 19]#(-8.4, 3.9)', '10#5#0.77#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 14]#(-5.31, 3.17)', '10#4#0.67#[0, 3, 6, 7, 9, 12, 13, 14, 15]#(-2.69, 4.55)', '10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-1.44, 4.84)', '10#4#0.59#[0, 3, 5, 9, 14]#(-0.12, 3.63)', '10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-4.44, 4.78)', '10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-2.63, 4.14)', '10#2#0.76#[0, 1, 3, 4, 6, 8, 9, 14, 16, 17, 18, 19]#(-3.62, 4.09)', '10#4#0.79#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-5.84, 4.65)', '10#2#0.35#[0, 5, 6, 8, 9, 10, 14, 15]#(7.31, 3.98)', '10#11#0.82#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 19]#(-3.51, 2.24)', '10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-7.49, 4.21)', '10#5#0.77#[0, 1, 2, 3, 4, 8, 9, 10, 12, 14, 16]#(0.31, 4.1)', '10#11#0.21#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 19]#(-2.52, 3.42)', '10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 17, 18]#(-3.2, 4.57)', '10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(-3.33, 3.76)', '10#3#0.73#[0, 1, 4, 5, 10, 13, 14, 18]#(-6.2, 4.67)', '10#4#0.64#[0, 2, 3, 11, 13, 18]#(-0.19, 3.53)', '10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-2.6, 3.31)', '10#5#0.93#[0, 2, 3, 4, 6, 8, 10, 12, 17, 18, 19]#(-8.18, 3.6)', '10#4#0.88#[0, 1, 2, 3, 5, 6, 7, 15, 18]#(-3.5, 0.47)', '10#5#0.88#[0, 2, 6, 7, 8, 9, 12, 13, 15, 16, 17, 18, 19]#(-0.5, 2.86)', '10#3#0.72#[0, 2, 5, 6, 9, 10, 12, 13, 15, 18, 19]#(0.46, 3.7)', '10#4#0.67#[0, 2, 3, 5, 6, 7, 9, 10, 12, 15, 19]#(-4.77, 4.54)', '10#5#0.73#[0, 1, 2, 3, 6, 8, 9, 10, 11, 15, 16, 17, 18, 19]#(-8.03, 4.18)', '10#7#0.92#[0, 3, 4, 6, 8, 12, 13, 14, 18]#(5.66, 2.67)', '10#2#0.76#[0, 1, 3, 4, 8, 9, 14, 16, 17, 18, 19]#(-6.53, 4.37)', '10#4#0.74#[0, 2, 8, 12, 13, 14, 15, 17, 19]#(-3.14, 4.66)', '10#2#0.86#[0, 1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17, 18, 19]#(-1.6, 4.86)', '10#4#0.67#[0, 2, 3, 5, 7, 8, 9, 10, 12, 15, 19]#(-1.97, 4.67)', '10#5#0.68#[0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19]#(-3.09, 4.12)', '10#4#0.7#[0, 3, 6, 7, 8, 12]#(-0.23, 3.63)', '10#6#0.11#[0, 2, 3, 4, 7, 12, 13, 18]#(3.19, 3.62)'])
+INFO:experiments:Number of evaluation predictions (i.e. number of times a model was used to make predictions): 70527
