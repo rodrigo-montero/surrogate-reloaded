@@ -74,33 +74,21 @@ class BlitzBNN(nn.Module):
     Hyperparameters that can be tuned: 
         - hidden_size: size of hidden layer
         - number of layers: add more BayesianLayers
-        - Activation: change ReLu for tanh
-    
-    Current Results:
-        - Accuracy test set: 0.9111880046136102
-        - Precision: 0.22
-        - Recall: 0.34
-        - F-measure: 0.27
-        - AUROC: 0.72
-
     """
     def __init__(self, input_size: int, layers: int = 1, regression: bool = False, hidden_layer_size: int = 128):
         super().__init__()
         self.regression = regression
         self.fcs = nn.ModuleList()
-        #hidden_layer_size = 128
+        #hidden_layer_size = 128                                                    # This is variable that has to be set when running the GA, until somebody finds a way to enter new CLI arguments and pass them to here.
 
-        # Fully connected Bayesian layers
-        self.fcs.append(BayesianLinear(input_size, hidden_layer_size))
+        self.fcs.append(BayesianLinear(input_size, hidden_layer_size))              # Fully connected Bayesian Layers
         for _ in range(layers - 1):
             self.fcs.append(BayesianLinear(hidden_layer_size, hidden_layer_size))
 
-        # Output layer
-        self.out = BayesianLinear(hidden_layer_size, 1 if regression else 2)
+        self.out = BayesianLinear(hidden_layer_size, 1 if regression else 2)        # Output layer
 
-        # Classification: use LogSoftmax → NLLLoss
         if not regression:
-            self.log_softmax = nn.LogSoftmax(dim=1)
+            self.log_softmax = nn.LogSoftmax(dim=1)                                 # Log Softmax activation
     
     def forward(self, x):
         for layer in self.fcs:
@@ -116,7 +104,6 @@ class BlitzBNN(nn.Module):
         - mean prediction
         - standard deviation (uncertainty estimate)
         """
-        print("Predicting with model in training mode:", self.training)
         self.train()  # forces stochastic behavior during inference
         outputs = [self.forward(x) for _ in range(num_samples)]
         stacked = th.stack(outputs)
@@ -167,24 +154,20 @@ class AvfBnnPolicy(AvfPolicy):
     def forward_and_loss(
         self, data: Tensor, target: Tensor, training: bool = True, weights: Tensor = None
     ) -> Tuple[Tensor, Optional[Tensor]]:
-        output = self.forward(data)  # log-probabilities if classification
+        output = self.forward(data)
 
         if not self.regression:
             if self.loss_type == "classification":
-                # During training: return NLLLoss and predictions
                 if training:
-                    # Output is log-softmax → use NLLLoss
                     loss = self.loss_function(input=output, target=target, weights=weights)
                     predictions = output.detach().argmax(dim=1)
                     return loss, predictions
 
-                # During evaluation: return log-probs and predictions
                 predictions = output.detach().argmax(dim=1)
                 return output.detach(), predictions
             else:
                 raise NotImplementedError("Loss type {} is not implemented".format(self.loss_type))
 
-        # === Regression ===
         predictions = th.squeeze(self.forward(data))
         if training:
             return self.loss_function(input=predictions, target=target, weights=weights, regression=True), predictions

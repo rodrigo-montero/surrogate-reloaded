@@ -1593,8 +1593,19 @@ class Avf:
                     self.logger.info("R2 score on test set: {:.2f}".format(test_accuracy))
                     self.logger.info("MAE score on test set: {:.2f}".format(test_mae))
                 else:
-                    logits, predictions = avf_policy.forward_and_loss(data=test_data, target=test_target, training=False,)
-                    scores = avf_policy.compute_score(logits=logits)
+                    #logits, predictions = avf_policy.forward_and_loss(data=test_data, target=test_target, training=False,)
+                    #scores = avf_policy.compute_score(logits=logits)
+                    if avf_train_policy == "bnn":
+                        model = avf_policy.get_model()
+                        mean_logits, std_logits = model.predict_mc(test_data, num_samples=30)
+                        scores = torch.exp(mean_logits)  # Convert log-softmax to softmax
+                        predictions = scores.argmax(dim=1)
+                        scores = scores[:, 1]
+                        self.logger.info("Mean uncertainty (std dev): {:.4f}".format(std_logits.mean().item()))
+                    else:
+                        logits, predictions = avf_policy.forward_and_loss(data=test_data, target=test_target, training=False)
+                        scores = avf_policy.compute_score(logits=logits)
+
 
                     correct = (predictions == test_target).sum().item()
                     self.logger.info("Accuracy test set: {}".format(correct / len(test_target)))

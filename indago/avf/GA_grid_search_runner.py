@@ -1,3 +1,7 @@
+"""
+Purpose of this file is to run a grid search directly on the Genetic Algorithm.
+It first trains the model, then runs the GA.
+"""
 import subprocess
 import itertools
 import csv
@@ -5,38 +9,12 @@ import json
 import time
 
 # === Parameter grid setup ===
-"""
-LAYERS_LIST = [1, 2, 3, 4]
-LR_LIST = [1e-3]
-UNDER = [True, False]
-OVERSAMPLE_LIST = [0.0, 0.5, 1.0]
-SEED_LIST = [21, 22, 23]
-HIDDEN_LAYER_SIZE = [32]
-TEST_SPLIT = [0.1]
-BATCH_SIZE = [128]
-MODEL = ["blitz"]
-AUGMENT = [True, False]
-WEIGHT_LOSS = [True, False]
-
-
-LAYERS_LIST = [1, 2, 3, 4]
+LAYERS_LIST = [2]
 LR_LIST = [1e-3]
 UNDER = [False]
-OVERSAMPLE_LIST = [0.0, 0.5, 1.0]
-SEED_LIST = [20, 21, 22]
-HIDDEN_LAYER_SIZE = [64, 128]
-TEST_SPLIT = [0.2]
-BATCH_SIZE = [128]
-MODEL = ["blitz"]
-AUGMENT = [True, False]
-WEIGHT_LOSS = [True, False]
-"""
-LAYERS_LIST = [1, 2, 3, 4]
-LR_LIST = [1e-3]
-UNDER = [True, False]
-OVERSAMPLE_LIST = [0.0, 0.5, 1.0]
-SEED_LIST = [21, 22, 23, 25, 25]
-HIDDEN_LAYER_SIZE = [128]
+OVERSAMPLE_LIST = [0.0]
+SEED_LIST = [-1]
+HIDDEN_LAYER_SIZE = [64]
 TEST_SPLIT = [0.1]
 BATCH_SIZE = [128]
 MODEL = ["blitz"]
@@ -49,7 +27,7 @@ param_grid = list(itertools.product(
 ))
 
 # === Output setup ===
-output_file = "grid_search_with_ga_T6.csv"
+output_file = "grid_search_with_ga_baseline.csv"
 with open(output_file, "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerow([
@@ -88,7 +66,7 @@ for i, (model, layers, lr, under, oversample, seed, hidden, ts, bs, augment, wl)
     process.wait()
 
     # === Run GA ===
-    for i in range(5):
+    for i in range(5): # This range should do the same as the 'num-runs-experiments' variable
         ga_cmd = [
             "python", "-m", "indago.experiments",
             "--algo", "her", "--exp-id", "1", "--env-name", "park", "--env-id", "parking-v0",
@@ -122,4 +100,4 @@ for i, (model, layers, lr, under, oversample, seed, hidden, ts, bs, augment, wl)
                 ga_mean, ga_std, ga_min, ga_max
             ])
 
-print("✅ Grid + GA search complete.")
+print("Grid + GA search complete.")
